@@ -1,0 +1,20 @@
+@import "tailwindcss";
+
+@source "../../../apps/**/*.{js,ts,jsx,tsx,html}";
+@source "../../../packages/**/*.{js,ts,jsx,tsx,html}";
+
+@theme {
+  --color-primary: #1e40af;
+  --color-secondary: #f59e0b;
+  --color-danger: #dc2626;
+  --color-success: #198754;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+}
+:root {
+  --color-primary: #1e40af;
+  --color-secondary: #f59e0b;
+  --color-danger: #dc2626;
+  --color-success: #198754;
+}

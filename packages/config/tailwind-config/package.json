@@ -1,0 +1,13 @@
+{
+  "name": "@repo/tailwind-config",
+  "version": "1.0.0",
+  "private": true,
+  "description": "tailwind configration package runed",
+  "main": "index.css",
+  "exports": {
+    ".": "./index.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
