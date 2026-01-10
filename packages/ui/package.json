@@ -8,11 +8,7 @@
   "author": "",
   "exports": {
     ".": "./index.jsx",
-    "./button": "./src/components/button/BaseButton.jsx",
-    "./PrimaryButton": "./src/components/PrimaryButton.jsx/",
-    "./SecondaryButton": "./src/components/SecondaryButton.jsx/",
-    "./SuccessButton": "./src/components/SuccessButton.jsx/",
-    "./DangerButton": "./src/components/DangerButton.jsx/"
+    "./button": "./src/components/button/BaseButton.jsx"
   },
   "license": "ISC"
 }
