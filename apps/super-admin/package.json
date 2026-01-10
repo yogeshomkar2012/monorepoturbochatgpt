@@ -10,7 +10,8 @@
     "preview": "vite preview"
   },
   "dependencies": {
-     "@repo/tailwind-config": "workspace:*",
+    "@repo/tailwind-config": "workspace:*",
+    "@repo/ui": "workspace:*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
