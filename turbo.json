@@ -7,13 +7,14 @@
     },
     "lint": {
       "dependsOn": ["^lint"]
-    }, "//#lint": {
+    },
+    "//#lint": {
       "inputs": ["**/*.config.js", "package.json", "turbo.json"],
       "outputs": []
     },
     "test": {
       "outputs": ["coverage/**"],
-      "dependsOn": ["build"]
+      "dependsOn": ["^test"]
     },
     "dev": {
       "cache": false,

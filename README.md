@@ -1,3 +1,74 @@
+<!-- developer -->
+
+# testing tools used and configration
+
+1 vitest -> (Fast,Vite-native)
+2 @testing-library/react -> test like a real user
+3 @testing-library/jest-dom -> Better assertions
+4 jsdom -> Browser environment
+5 turbo -> cache test result
+
+install test depndencies in root level
+
+cmd :- pnpm add -D vitest jsdom @testing-library/react @testing-library/jest-dom --workspace-root
+
+vitest-->test runner
+@testing-library/react-->render react components
+@testing-library/jest-dom -->better matchers
+jsdom-->fake browser for tests
+
+# configration setup
+
+# step 1 create vitest.config.js each apps
+
+create vitest.config.js in each apps where in add this
+
+import { defineConfig } from "vitest/config";
+import react from "@vitejs/plugin-react-swc";
+
+export default defineConfig({
+  plugins: [react()],
+  test: {
+    environment: "jsdom",
+    globals: true,
+    setupFiles: "./src/test/setup.js",
+  },
+});
+
+
+# step 2 create vitest.setup.js
+
+create vitest.setup.js on root
+where in add this
+import "@testing-library/jest-dom";
+
+# 3 add this script to root package.json
+
+{
+"script":{
+"test":"vitest",
+"test:run:"vitest run",
+"test:ui:"vitest --ui"
+}
+}
+
+# 4 add this task to turbo.json
+
+"test": {
+"outputs": ["coverage/**"],
+"dependsOn": ["^test"]
+},
+
+# 5 add this script for each apps package.json file
+
+{
+"scripts":{
+"test":"vitest"
+}
+}
+
+<!-- developer -->
+
 # Turborepo starter
 
 This Turborepo starter is maintained by the Turborepo core team.
