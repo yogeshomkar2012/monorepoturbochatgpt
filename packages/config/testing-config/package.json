@@ -1,0 +1,10 @@
+{
+  "name": "@repo/testing-config",
+  "version": "1.0.0",
+  "private": true,
+  "description": "testing config runned",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js"
+  }
+}

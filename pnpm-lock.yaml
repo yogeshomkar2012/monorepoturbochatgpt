@@ -194,6 +194,9 @@ importers:
       '@repo/tailwind-config':
         specifier: workspace:*
         version: link:../../packages/config/tailwind-config
+      '@repo/testing-config':
+        specifier: workspace:*
+        version: link:../../packages/config/testing-config
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
@@ -236,6 +239,8 @@ importers:
         version: 7.3.1(@types/node@22.15.3)(jiti@2.6.1)(lightningcss@1.30.2)
 
   packages/config/tailwind-config: {}
+
+  packages/config/testing-config: {}
 
   packages/eslint-config:
     devDependencies:
