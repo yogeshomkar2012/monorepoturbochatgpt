@@ -31,14 +31,17 @@ export default defineConfig({
   test: {
     environment: "jsdom",
     globals: true,
-    setupFiles: "./src/test/setup.js",
+    setupFiles: "./vitest.setup.js",
+    coverage: {
+      reporter: ["text", "json", "html"],
+    },
   },
 });
 
 
-# step 2 create vitest.setup.js
+# step 2 create vitest.setup.js in each apps
 
-create vitest.setup.js on root
+create vitest.setup.js in each apps
 where in add this
 import "@testing-library/jest-dom";
 
