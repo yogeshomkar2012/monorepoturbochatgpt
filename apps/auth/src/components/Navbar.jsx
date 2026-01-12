@@ -1,23 +1,32 @@
 import React from "react";
 
-import { Link } from "react-router-dom";
-import { AUTH_ROUTES } from "../constants/routes.constants";
+import { NavLink } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ links }) => {
+  const baseLink = "capitalize py-1 rounded px-2 transition";
+  const active = "text-primary font-semibold";
+  const inactive = "text-white hover:text-primary";
   return (
-    <header className="flex justify-between items-center px-4 py-4 bg-primary text-white">
-      <div className="flex ">
-        <div>Logo img</div>
-        <h1>Name brand</h1>
+    <header className="bg-warning">
+      <div className="px-4 h-16 flex items-center justify-between">
+        <div className="text-xl font-bold text-primary">Home Kar Lo</div>
+        <nav className="flex ">
+          <ul className="hidden md:flex gap-6">
+            {links.map((link, index) => (
+              <li key={index}>
+                <NavLink
+                  to={link.path}
+                  className={({ isActive }) =>
+                    `${baseLink} ${isActive ? active : inactive}`
+                  }
+                >
+                  {link.label}
+                </NavLink>
+              </li>
+            ))}
+          </ul>
+        </nav>
       </div>
-
-      <nav className="">
-        <Link to={AUTH_ROUTES.HOME}>Home</Link>
-        <Link to={AUTH_ROUTES.ABOUT}>About</Link>
-        <Link to={AUTH_ROUTES.SERVICE}>Service</Link>
-        <Link to={AUTH_ROUTES.CONTACT}>Contact</Link>
-        <Link to={AUTH_ROUTES.LOGIN}>Login</Link>
-      </nav>
     </header>
   );
 };

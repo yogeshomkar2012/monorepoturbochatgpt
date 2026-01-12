@@ -45,12 +45,12 @@
   --color-forground: #020617;
 }
 
-:root {
+/* :root {
   --color-primary: #1e40af;
   --color-secondary: #f59e0b;
   --color-danger: #dc2626;
   --color-success: #198754;
-}
+} */
 
 @layer base {
   body {

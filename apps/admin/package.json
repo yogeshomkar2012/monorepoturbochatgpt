@@ -11,6 +11,7 @@
     "test": "vitest"
   },
   "dependencies": {
+    "@repo/testing-config": "workspace:*",
     "@repo/factories": "workspace:*",
     "@repo/tailwind-config": "workspace:*",
     "@repo/ui": "workspace:*",

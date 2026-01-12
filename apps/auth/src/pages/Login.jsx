@@ -19,7 +19,7 @@ function Login() {
     console.log(alert("jsj"));
   };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-secondary">
+    // <div className="flex items-center justify-center bg-red-400">
       <div className="bg-white p-6 rounded-lg shadow-md w-96">
         <h1 className="text-2xl font-bold mb-4 text-center">Login</h1>
         <form onSubmit={handleSubmit}>
@@ -45,7 +45,7 @@ function Login() {
           </ButtonFactory>
         </form>
       </div>
-    </div>
+    // </div>
   );
 }
 

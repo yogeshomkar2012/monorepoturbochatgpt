@@ -1,14 +1,11 @@
 import react from "@vitejs/plugin-react-swc";
-import { defineConfig } from "vitest/config";
-
-export default defineConfig({
-  plugins: [react()],
-  test: {
-    environment: "jsdom",
-    globals: true,
-    setupFiles: "./vitest.setup.js",
-    coverage: {
-      reporter: ["text", "json", "html"],
+import { defineConfig, mergeConfig } from "vitest/config";
+import { baseTestingConfig } from "@repo/testing-config";
+export default defineConfig(
+  mergeConfig(baseTestingConfig, {
+    plugins: [react()],
+    test: {
+      environment: "jsdom",
     },
-  },
-});
+  })
+);
