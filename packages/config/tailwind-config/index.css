@@ -3,8 +3,6 @@
 @source "../../../apps/**/*.{js,ts,jsx,tsx,html}";
 @source "../../../packages/**/*.{js,ts,jsx,tsx,html}";
 
-@import "tailwindcss";
-
 /* ================================
    Design Tokens (Transportation App)
    Tailwind CSS v4 (CSS-first)
@@ -41,8 +39,18 @@
   --color-muted: #f1f5f9;
   --color-muted-foreground: #64748b;
   /* app background */
-  --color-background: #f8fafc;
+  --color-background: rgb(231, 229, 229);
   --color-forground: #020617;
+
+  /* text */
+  --color-text-gray: #808080;
+  --color-text-white: #ffffff;
+  /* backdrop */
+  --color-back-drop: #f8bb54;
+  /* navbar hover */
+  --color-navbar-hover: #11e078;
+  /* green Background */
+  --color-green-background: #00a85a;
 }
 
 /* :root {

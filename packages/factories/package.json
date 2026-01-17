@@ -6,8 +6,7 @@
   "type": "module",
   "exports": {
     ".": "./index.jsx",
-    "./ButtonFactory": "./ButtonFactory.jsx",
-    "./AuthFactory": "./AuthFactory.jsx"
+    "./ButtonFactory": "./ButtonFactory.jsx"
   },
   "keywords": [],
   "author": "",

@@ -15,6 +15,7 @@
     "@repo/factories": "workspace:*",
     "@repo/tailwind-config": "workspace:*",
     "@repo/ui": "workspace:*",
+    "@repo/app-schema": "workspace:*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-router-dom": "^7.12.0"

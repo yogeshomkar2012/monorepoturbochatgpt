@@ -1,15 +1,33 @@
-import React from "react";
+import React, { useState } from "react";
 import Navbar from "../components/Navbar";
-import { AUTH_ROUTES } from "../constants/routes.constants";
-const publicLinks = [
-  { label: "home", path: `${AUTH_ROUTES.HOME}` },
-  { label: "about", path: `${AUTH_ROUTES.ABOUT}` },
-  { label: "service", path: `${AUTH_ROUTES.SERVICE}` },
-  { label: "contact", path: `${AUTH_ROUTES.CONTACT}` },
-  { label: "Login", path: `${AUTH_ROUTES.LOGIN}` },
-];
+import { useBranding } from "../hooks/useBranding";
+
 const NavbarContainer = () => {
-  return <Navbar links={publicLinks} />;
+  const { resolveBranding, resolveNavigation } = useBranding();
+
+  // 🔴 Future API data
+  const serverBrandData = {};
+  const serverNavigationData = [];
+
+  const branding = resolveBranding(serverBrandData);
+  const navigationLinks = resolveNavigation(serverNavigationData);
+
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  const toggleMobileMenu = () =>
+    setIsMobileMenuOpen((prev) => !prev);
+
+  return (
+    <Navbar
+      brandName={branding.brandName}
+      logo={branding.logo}
+      links={navigationLinks}
+      isMobileMenuOpen={isMobileMenuOpen}
+      onToggleMenuOpen={toggleMobileMenu}
+    />
+  );
 };
+//  isMobileMeuOpen,
+  // onToggleMenuOpen,
 
 export default NavbarContainer;

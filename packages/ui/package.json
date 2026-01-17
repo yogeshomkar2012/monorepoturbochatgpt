@@ -8,7 +8,8 @@
   "author": "",
   "exports": {
     ".": "./index.jsx",
-    "./button": "./src/components/button/BaseButton.jsx"
+    "./button": "./src/components/button/BaseButton.jsx",
+    "./footer": "./src/components/Footer.jsx"
   },
   "scripts": {
     "test": "vitest",

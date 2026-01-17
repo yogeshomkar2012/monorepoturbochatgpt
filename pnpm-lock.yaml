@@ -44,6 +44,9 @@ importers:
 
   apps/admin:
     dependencies:
+      '@repo/app-schema':
+        specifier: workspace:*
+        version: link:../../packages/config/app-schema
       '@repo/factories':
         specifier: workspace:*
         version: link:../../packages/factories
@@ -96,6 +99,9 @@ importers:
 
   apps/auth:
     dependencies:
+      '@repo/app-schema':
+        specifier: workspace:*
+        version: link:../../packages/config/app-schema
       '@repo/factories':
         specifier: workspace:*
         version: link:../../packages/factories
@@ -148,6 +154,9 @@ importers:
 
   apps/superadmin:
     dependencies:
+      '@repo/app-schema':
+        specifier: workspace:*
+        version: link:../../packages/config/app-schema
       '@repo/factories':
         specifier: workspace:*
         version: link:../../packages/factories
@@ -200,6 +209,9 @@ importers:
 
   apps/user:
     dependencies:
+      '@repo/app-schema':
+        specifier: workspace:*
+        version: link:../../packages/config/app-schema
       '@repo/factories':
         specifier: workspace:*
         version: link:../../packages/factories
@@ -250,6 +262,12 @@ importers:
         specifier: ^7.2.4
         version: 7.3.1(@types/node@22.15.3)(jiti@2.6.1)(lightningcss@1.30.2)
 
+  packages/config/app-schema:
+    dependencies:
+      '@repo/ui':
+        specifier: workspace:*
+        version: link:../../ui
+
   packages/config/tailwind-config: {}
 
   packages/config/testing-config: {}
@@ -291,6 +309,12 @@ importers:
         version: 8.50.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)
 
   packages/factories: {}
+
+  packages/icons:
+    dependencies:
+      lucide-react:
+        specifier: ^0.562.0
+        version: 0.562.0(react@19.2.0)
 
   packages/typescript-config: {}
 
@@ -1981,6 +2005,11 @@ packages:
 
   lru-cache@5.1.1:
     resolution: {integrity: sha512-KpNARQA3Iwv+jTA0utUVVbrh+Jlrr1Fv0e56GGzAFOXN7dk/FviaDW8LHmK52DlcH4WP2n6gI8vN1aesBFgo9w==}
+
+  lucide-react@0.562.0:
+    resolution: {integrity: sha512-82hOAu7y0dbVuFfmO4bYF1XEwYk/mEbM5E+b1jgci/udUBEE/R7LF5Ip0CCEmXe8AybRM8L+04eP+LGZeDvkiw==}
+    peerDependencies:
+      react: ^16.5.1 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
   lz-string@1.5.0:
     resolution: {integrity: sha512-h5bgJWpxJNswbU7qCrV0tIKQCaS3blPDrqKWx+QxzuzL1zGUzij9XCWLrSLsJPu5t+eWA/ycetzYAO5IOMcWAQ==}
@@ -4383,6 +4412,10 @@ snapshots:
   lru-cache@5.1.1:
     dependencies:
       yallist: 3.1.1
+
+  lucide-react@0.562.0(react@19.2.0):
+    dependencies:
+      react: 19.2.0
 
   lz-string@1.5.0: {}
 
