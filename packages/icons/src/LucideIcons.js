@@ -1,10 +1,1 @@
-export {
-  Menu,
-  X,
-  Home,
-  Phone,
-  Info,
-  User,
-  LogIn,
-  HandGrab
-} from "lucide-react";
+export { Truck, Plane, Ship, Warehouse, Package, Route } from "lucide-react";

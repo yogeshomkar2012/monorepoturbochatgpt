@@ -2,10 +2,10 @@ import { ButtonFactory } from "@repo/factories";
 
 export default function Hero({ branding }) {
   return (
-    <section className="p-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[70vh]">
+    <section className="bg-white rounded-lg p-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[70vh] ">
       {/* LEFT CONTENT */}
-      <div className="grid gap-6 bg-white p-2 rounded-lg">
-        <h1 className="text-4xl lg:text-5xl font-bold text-primary leading-tight">
+      <div className="grid gap-6">
+        <h1 className="text-4xl font-serif lg:text-5xl font-bold text-primary leading-tight">
           {branding.heroTitle}
         </h1>
 
@@ -19,7 +19,7 @@ export default function Hero({ branding }) {
         </div>
       </div>
       {/* RIGHT VISUAL */}
-      <div className="bg-red-400 bg-white p-2 rounded-lg h-full">
+      <div className="   h-full">
         <img src={branding.heroImage} className="rounded-lg" />
       </div>
     </section>

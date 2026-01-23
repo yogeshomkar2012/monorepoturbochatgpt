@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      lucide-react:
+        specifier: ^0.562.0
+        version: 0.562.0(react@19.2.0)
     devDependencies:
       '@tailwindcss/vite':
         specifier: ^4.1.18
@@ -105,6 +109,9 @@ importers:
       '@repo/factories':
         specifier: workspace:*
         version: link:../../packages/factories
+      '@repo/icons':
+        specifier: workspace:*
+        version: link:../../packages/icons
       '@repo/tailwind-config':
         specifier: workspace:*
         version: link:../../packages/config/tailwind-config
@@ -264,6 +271,9 @@ importers:
 
   packages/config/app-schema:
     dependencies:
+      '@repo/icons':
+        specifier: workspace:*
+        version: link:../../icons
       '@repo/ui':
         specifier: workspace:*
         version: link:../../ui

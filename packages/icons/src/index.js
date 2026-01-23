@@ -1,1 +1,1 @@
-export * from "./LucideIcons.js";
+export * from "./lucideIcons.js";

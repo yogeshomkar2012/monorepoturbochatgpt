@@ -1,4 +1,4 @@
-import { heroImage } from "../../ui/src/assets";
+import { heroImage } from "../../../ui/src/assets";
 
 export const brandingSchema = {
   brandName: "omkar agencies",

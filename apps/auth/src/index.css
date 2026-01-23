@@ -1,1 +1,14 @@
 @import "@repo/tailwind-config";
+.hide-scrollbar {
+  /* For Internet Explorer and Edge */
+  -ms-overflow-style: none;
+  /* For Firefox */
+  scrollbar-width: none;
+  /* For Chrome, Safari, and Opera */
+}
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scroll {
+  overflow: hidden;
+}

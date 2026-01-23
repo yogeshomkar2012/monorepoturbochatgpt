@@ -10,7 +10,7 @@ const Navbar = ({
 }) => {
   return (
     <>
-      <div className="grid  md:grid-cols-2 grid-cols-[auto_1fr] items-center h-16 px-4">
+      <div className=" grid justify-between md:grid-cols-2 grid-cols-[auto_1fr] items-center h-16 px-4">
         <div className="flex items-center gap-4">
           <div className="h-10 rounded-full">
             <img className="h-full rounded-full" src={`${logo}`} />
@@ -19,7 +19,7 @@ const Navbar = ({
             {brandName}
           </div>
         </div>
-        <div className="">
+        <div className=" max-w-lg justify-self-end ">
           <nav className="hidden md:block">
             <ul className="grid grid-cols-5  place-content-around gap-2  ">
               {links.map((link, index) => (
