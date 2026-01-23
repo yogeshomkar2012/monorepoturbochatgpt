@@ -1,7 +1,6 @@
-import React from "react";
 import Hero from "../components/home/Hero";
 import { HowItWorks } from "../components/home/HowItWorks";
-import { useBranding } from "../hooks/useBranding";
+import { useHome } from "../hooks/useHome";
 import ServicesSection from "../components/home/ServicesSection";
 import { WhyChooseUs } from "../components/home/WhyChooseUs";
 import { Coverage } from "../components/home/Coverage";
@@ -20,7 +19,7 @@ const HomeContainer = () => {
     resolveTestimonial,
     resolvecallToAction,
     resolveFooter,
-  } = useBranding();
+  } = useHome();
   const serverBrandData = {};
   const branding = resolveBranding(serverBrandData);
   const serverServiceData = [];

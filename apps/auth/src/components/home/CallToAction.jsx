@@ -7,7 +7,9 @@ export const CallToAction = ({ callToActionData = {} }) => {
   return (
     <section className="bg-primary rounded-2xl py-20">
       <div className="mx-auto max-w-7xl px-6 text-center">
-        <h2 className="text-3xl font-bold text-white md:text-4xl">{title}</h2>
+        <h2 className="text-3xl font-bold  md:text-4xl text-warning">
+          {title}
+        </h2>
 
         <p className="mt-4 max-w-2xl mx-auto text-white/80">{subtitle}</p>
 

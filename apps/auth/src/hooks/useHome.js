@@ -11,7 +11,7 @@ import {
   footerSchema,
 } from "@repo/app-schema";
 
-export const useBranding = () => {
+export const useHome = () => {
   const resolveBranding = (serverBrandData) => {
     const hasServerBrand =
       serverBrandData && Object.keys(serverBrandData).length > 0;
@@ -27,7 +27,7 @@ export const useBranding = () => {
   };
   const resolveServices = (serverServieData) => {
     const hasServerService =
-      Array.isArray(serverServieData) && serverServieData > 0;
+      Array.isArray(serverServieData) && serverServieData.length > 0;
     return hasServerService ? serverServieData : serviceSchema;
   };
 

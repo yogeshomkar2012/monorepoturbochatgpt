@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import ServiceContainer from "../containers/ServiceContainer";
 
 const Services = () => {
-  return (
-    <div>Services</div>
-  )
-}
+  return <ServiceContainer />;
+};
 
-export default Services
+export default Services;

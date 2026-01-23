@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Navbar from "../components/Navbar";
-import { useBranding } from "../hooks/useBranding";
+import { useHome } from "../hooks/useHome";
 
 const NavbarContainer = () => {
-  const { resolveBranding, resolveNavigation } = useBranding();
+  const { resolveBranding, resolveNavigation } = useHome();
 
   // 🔴 Future API data
   const serverBrandData = {};
@@ -14,8 +14,7 @@ const NavbarContainer = () => {
 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () =>
-    setIsMobileMenuOpen((prev) => !prev);
+  const toggleMobileMenu = () => setIsMobileMenuOpen((prev) => !prev);
 
   return (
     <Navbar
@@ -27,7 +26,5 @@ const NavbarContainer = () => {
     />
   );
 };
-//  isMobileMeuOpen,
-  // onToggleMenuOpen,
 
 export default NavbarContainer;

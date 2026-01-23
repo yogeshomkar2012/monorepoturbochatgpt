@@ -8,3 +8,5 @@ export * from "./auth/technology.Schema";
 export * from "./auth/testimonial.schema";
 export * from "./auth/callToAction.schema";
 export * from "./auth/footer.schema";
+export * from "./auth/about.schema";
+export * from "./auth/services.schema";
