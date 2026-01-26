@@ -1,13 +1,22 @@
-import {serviceSchema} from "@repo/app-schema";
+import { servicesSchema } from "@repo/app-schema";
+import { resolveData } from "@repo/utils";
 
 export const useServices = () => {
-  const resolveServices = (serverData) => {
-    const hasData = serverData && Object.keys(serverData).length > 0;
-
-    return hasData ? serverData : servicesSchema;
-  };
-
+  const getServiceHero = (serverData) =>
+    resolveData(serverData, servicesSchema.hero);
+  const getCoreService = (serverData) =>
+    resolveData(serverData, servicesSchema.coreServices);
+  const getIndustry = (serverData) =>
+    resolveData(serverData, servicesSchema.industries);
+  const getWorkFlow = (serverData) =>
+    resolveData(serverData, servicesSchema.workflow);
+  const getServiceCTA = (serverData) =>
+    resolveData(serverData, servicesSchema.cta);
   return {
-    resolveServices,
+    getServiceCTA,
+    getCoreService,
+    getServiceHero,
+    getIndustry,
+    getWorkFlow,
   };
 };

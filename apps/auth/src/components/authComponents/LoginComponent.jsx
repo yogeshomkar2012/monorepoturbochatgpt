@@ -2,7 +2,9 @@ import { ButtonFactory } from "@repo/factories";
 const LoginComponent = ({ handleChange, userData, handleSubmit }) => {
   return (
     <div className="bg-white  border-primary p-6 rounded-lg shadow-md w-96">
-      <h1 className="text-2xl font-bold mb-4 text-center">Login</h1>
+      <h1 className="text-2xl font-bold mb-4 text-center text-primary uppercase">
+        Login
+      </h1>
       <form onSubmit={handleSubmit}>
         <input
           onChange={handleChange}
@@ -30,4 +32,4 @@ const LoginComponent = ({ handleChange, userData, handleSubmit }) => {
 };
 
 export default LoginComponent;
-``
+``;

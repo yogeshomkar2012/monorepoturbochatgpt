@@ -1,7 +1,7 @@
 export const navigationSchema = [
   { label: "home", path: "/" },
   { label: "about", path: "/about" },
-  { label: "service", path: "/service" },
+  { label: "services", path: "/services" },
   { label: "contact", path: "/contact" },
   { label: "Login", path: "/login" },
 ];

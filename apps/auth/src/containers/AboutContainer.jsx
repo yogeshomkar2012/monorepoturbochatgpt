@@ -1,37 +1,44 @@
 import React from "react";
 import { CallToAction } from "../components/home/CallToAction";
 import AboutHero from "../components/about/AboutHero";
-import { useAbout } from "../hooks/useAbout";
 import { MissionVision } from "../components/about/MissionVision";
 import { Leadership } from "../components/about/Leadership";
 import { Journey } from "../components/about/Journey";
 import { Certifications } from "../components/about/Certification";
 import { Team } from "../components/about/Team";
-import { useHome } from "../hooks/useHome";
-import Footer from "../components/home/Footer";
+import FooterContainer from "./FooterContainer";
+import { useCTA } from "../hooks/useCTA";
+import { useLaderShip } from "../hooks/useLeaderShip";
+import { useMissionVission } from "../hooks/useMissionVission";
+import { useJourney } from "../hooks/useJourney";
+import { useCertification } from "../hooks/useCertification";
+import { useTeam } from "../hooks/useTeam";
 const AboutContainer = () => {
-  const {
-    resolvemissionVision,
-    resolveleadership,
-    resolvejourney,
-    resolveCertification,
-    resolveTeam,
-  } = useAbout();
-  const { resolvecallToAction, resolveFooter } = useHome();
+
   const leadershipServerData = [];
-  const leadershipData = resolveleadership(leadershipServerData);
+  const { getLeaderShip } = useLaderShip();
+  const leadershipData = getLeaderShip(leadershipServerData);
+
   const missionServerData = [];
-  const resolvemissionVisionData = resolvemissionVision(missionServerData);
+  const { getMissionVisson } = useMissionVission();
+  const resolvemissionVisionData = getMissionVisson(missionServerData);
+
   const journeyServerData = [];
-  const resolvejourneyData = resolvejourney(journeyServerData);
+  const { getJourney } = useJourney();
+  const resolvejourneyData = getJourney(journeyServerData);
+
   const certificationServerData = [];
-  const certificationData = resolveCertification(certificationServerData);
+  const { getCertification } = useCertification();
+  const certificationData = getCertification(certificationServerData);
+ 
   const teamServerData = [];
-  const teamData = resolveTeam(teamServerData);
+  const { getTeam } = useTeam();
+  const teamData = getTeam(teamServerData);
+ 
   const serverCallToActionData = {};
-  const callToActionData = resolvecallToAction(serverCallToActionData);
-  const serverFooterData = {};
-  const footerData = resolveFooter(serverFooterData);
+  const { getCTA } = useCTA();
+  const callToActionData = getCTA(serverCallToActionData);
+
   return (
     <main className="grid gap-24 pt-24 p-6 ">
       <AboutHero />
@@ -41,11 +48,7 @@ const AboutContainer = () => {
       <Certifications data={certificationData} />
       <Team data={teamData} />
       <CallToAction callToActionData={callToActionData} />
-      <Footer
-        brand={footerData.brand}
-        links={footerData.links}
-        copyright={footerData.copyright}
-      />
+      <FooterContainer />
     </main>
   );
 };

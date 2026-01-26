@@ -1,58 +1,61 @@
 import Hero from "../components/home/Hero";
 import { HowItWorks } from "../components/home/HowItWorks";
-import { useHome } from "../hooks/useHome";
+
 import ServicesSection from "../components/home/ServicesSection";
 import { WhyChooseUs } from "../components/home/WhyChooseUs";
 import { Coverage } from "../components/home/Coverage";
 import { Technology } from "../components/home/Technology";
 import { Testimonials } from "../components/home/Testtimaonials";
 import { CallToAction } from "../components/home/CallToAction";
-import Footer from "../components/home/Footer";
+import FooterContainer from "./FooterContainer";
+
+import { useBranding } from "../hooks/useBranding";
+import { useHowItWorks } from "../hooks/useHowItWorks";
+import { useCoverage } from "../hooks/useCoverage";
+import { useWhyChooseUs } from "../hooks/useWhyChooseUs";
+import { useTechnology } from "../hooks/useTechnology";
+import { useTestiMonial } from "../hooks/useTestiMonial";
+import { useCTA } from "../hooks/useCTA";
+
 const HomeContainer = () => {
-  const {
-    resolveHowItWorks,
-    resolveBranding,
-    resolveServices,
-    resolvewhyChooseUs,
-    resolveCoverage,
-    resolvetechnology,
-    resolveTestimonial,
-    resolvecallToAction,
-    resolveFooter,
-  } = useHome();
   const serverBrandData = {};
-  const branding = resolveBranding(serverBrandData);
-  const serverServiceData = [];
-  const services = resolveServices(serverServiceData);
-  const serverWhyChooseusData = {};
-  const whyChooseusData = resolvewhyChooseUs(serverWhyChooseusData);
+  const { getBranding } = useBranding();
+  const branding = getBranding(serverBrandData);
   const serverHowItWorksData = {};
-  const HowItWorksData = resolveHowItWorks(serverHowItWorksData);
+  const { getHowItWorksData } = useHowItWorks();
+  const HowItWorksData = getHowItWorksData(serverHowItWorksData);
+
+  const { getCoverageData } = useCoverage();
   const serverCoverageData = {};
-  const coverageData = resolveCoverage(serverCoverageData);
+  const coverageData = getCoverageData(serverCoverageData);
+
+  const { getWhyChooseUs } = useWhyChooseUs();
+  const serverWhyChooseusData = {};
+  const whyChooseusData = getWhyChooseUs(serverWhyChooseusData);
+
   const serverTechnology = {};
-  const technologyData = resolvetechnology(serverTechnology);
+  const { getTechnology } = useTechnology();
+  const technologyData = getTechnology(serverTechnology);
+
   const serverTestimonialData = {};
-  const testimonialsData = resolveTestimonial(serverTestimonialData);
+  const { getTestiMonial } = useTestiMonial();
+  const testimonialsData = getTestiMonial(serverTestimonialData);
+
   const serverCallToActionData = {};
-  const callToActionData = resolvecallToAction(serverCallToActionData);
-  const serverFooterData = {};
-  const footerData = resolveFooter(serverFooterData);
+  const { getCTA } = useCTA();
+  const callToActionData = getCTA(serverCallToActionData);
+  console.log(callToActionData);
   return (
     <main className="grid gap-24 pt-24 p-6 ">
       <Hero branding={branding} />
-      <ServicesSection services={services} />
+      <ServicesSection />
       <WhyChooseUs whyChooseusData={whyChooseusData} />
       <HowItWorks HowItWorksData={HowItWorksData} />
       <Coverage coverageData={coverageData} />
       <Technology technologyData={technologyData} />
       <Testimonials testimonialsData={testimonialsData} />
       <CallToAction callToActionData={callToActionData} />
-      <Footer
-        brand={footerData.brand}
-        links={footerData.links}
-        copyright={footerData.copyright}
-      />
+      <FooterContainer />
     </main>
   );
 };

@@ -2,7 +2,9 @@ export const AUTH_ROUTES = {
   HOME: "/",
   ABOUT: "/about",
   CONTACT: "/contact",
-  SERVICE: "/service",
+  SERVICE: "/services",
   LOGIN: "/login",
   SIGNUP: "/signup",
+  CAREER: "/careers",
+  BLOG: "/blog",
 };
