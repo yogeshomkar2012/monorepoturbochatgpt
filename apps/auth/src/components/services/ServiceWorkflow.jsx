@@ -1,4 +1,5 @@
-const ServiceWorkflow = ({ data }) => {
+const ServiceWorkflow = ({ data = [] }) => {
+  const grids = data.length > 5 ? 5 : data.length;
   return (
     <section className="bg-text-white py-20 ">
       <div className="container mx-auto px-6">
@@ -6,7 +7,9 @@ const ServiceWorkflow = ({ data }) => {
           How Our Service Works
         </h2>
 
-        <div className="grid gap-6 md:grid-cols-3 lg:grid-cols-5">
+        <div
+          className={`grid gap-6 md:grid-cols-3 lg:grid-cols-${grids}`}
+        >
           {data.map((item, index) => (
             <div
               key={index}

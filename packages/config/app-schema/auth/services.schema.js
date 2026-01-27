@@ -23,12 +23,21 @@ export const servicesSchema = {
         "GPS Tracking",
         "On-Time Delivery",
       ],
-      process: [
+      overview:
+        "Our road transportation service ensures fast, reliable, and cost-effective delivery across cities and states.",
+
+      workflow: [
         "Pickup from origin",
-        "Route optimization",
-        "Live tracking",
+        "Route planning",
+        "Live GPS tracking",
         "Safe delivery",
       ],
+      industries: ["E-commerce", "Retail", "Manufacturing", "FMCG"],
+      cta: {
+        title: "Move Your Cargo by Road",
+        buttonText: "Get Road Quote",
+        path: "/contact",
+      },
     },
 
     // 🏢 WAREHOUSING
@@ -46,12 +55,21 @@ export const servicesSchema = {
         "24/7 security",
         "Distribution support",
       ],
-      process: [
-        "Goods receiving",
+      overview:
+        "Secure, scalable, and technology-driven warehousing solutions for modern supply chains.",
+    
+      workflow: [
+        "Inbound receiving",
         "Inventory storage",
-        "Order processing",
-        "Dispatch",
+        "Order fulfillment",
+        "Outbound dispatch",
       ],
+      industries: ["E-commerce", "Pharma", "Retail", "FMCG"],
+      cta: {
+        title: "Optimize Your Storage",
+        buttonText: "Talk to Us",
+        path: "/contact",
+      },
     },
 
     // ✈️ AIR FREIGHT
@@ -69,12 +87,21 @@ export const servicesSchema = {
         "Priority handling",
         "Custom clearance support",
       ],
-      process: [
-        "Cargo booking",
+      overview:
+        "Time-critical air freight services for urgent and high-value shipments.",
+      
+      workflow: [
+        "Pickup & documentation",
         "Airport handling",
-        "Flight transit",
+        "Air transit",
         "Final delivery",
       ],
+      industries: ["Pharma", "Electronics", "Healthcare"],
+      cta: {
+        title: "Ship Faster by Air",
+        buttonText: "Get Air Quote",
+        path: "/contact",
+      },
     },
 
     // 🚢 OCEAN FREIGHT
@@ -92,12 +119,21 @@ export const servicesSchema = {
         "Cost-effective transport",
         "Cargo safety compliance",
       ],
-      process: [
-        "Cargo consolidation",
+      overview:
+        "Reliable ocean freight solutions for large-volume international shipments.",
+     
+      workflow: [
+        "Container booking",
         "Port handling",
         "Ocean transit",
         "Destination delivery",
       ],
+      industries: ["Manufacturing", "Automotive", "Heavy Equipment"],
+      cta: {
+        title: "Ship Worldwide",
+        buttonText: "Get Ocean Quote",
+        path: "/contact",
+      },
     },
 
     // 📦 EXPRESS DELIVERY
@@ -109,18 +145,27 @@ export const servicesSchema = {
       title: "Express Delivery",
       subtitle: "Same-Day & Next-Day Delivery",
       description: "Time-sensitive express delivery across major cities.",
+    
+      overview:
+        "Fast and reliable express delivery solutions for urgent shipments.",
       features: [
         "Same-day delivery",
         "Next-day delivery",
         "Real-time tracking",
         "Proof of delivery",
       ],
-      process: [
-        "Order confirmation",
-        "Immediate pickup",
-        "Priority routing",
-        "Fast delivery",
+      workflow: [
+        "Pickup",
+        "Route optimization",
+        "Express transit",
+        "Instant delivery",
       ],
+      industries: ["E-commerce", "Retail"],
+      cta: {
+        title: "Deliver Faster",
+        buttonText: "Start Express",
+        path: "/contact",
+      },
     },
 
     // 🧭 SUPPLY CHAIN SOLUTIONS
@@ -133,18 +178,27 @@ export const servicesSchema = {
       subtitle: "Optimized End-to-End Logistics",
       description:
         "Optimized supply chain planning for cost and time efficiency.",
+     
+      overview:
+        "Integrated supply chain solutions to reduce cost, improve visibility, and increase efficiency.",
       features: [
         "Supply chain planning",
         "Vendor coordination",
         "Cost optimization",
-        "Risk management",
+        "End-to-end visibility",
       ],
-      process: [
+      workflow: [
         "Requirement analysis",
-        "Supply chain design",
-        "Execution & monitoring",
-        "Continuous optimization",
+        "Planning & optimization",
+        "Execution",
+        "Monitoring & improvement",
       ],
+      industries: ["Manufacturing", "Retail", "FMCG"],
+      cta: {
+        title: "Optimize Your Supply Chain",
+        buttonText: "Consult Experts",
+        path: "/contact",
+      },
     },
   ],
 

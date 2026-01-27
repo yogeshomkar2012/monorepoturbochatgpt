@@ -12,22 +12,27 @@ import CareerPage from "../pages/CareerPage";
 import Blogpage from "../pages/Blogpage";
 import BlogDetilePage from "../pages/BlogDetilePage";
 import ServiceDetailesPage from "../pages/servicePages/ServiceDetailesPage";
+import PrivacyPage from "../pages/PrivacyPage";
+import TermsPage from "../pages/TermsPage";
 export const router = createBrowserRouter([
   {
     element: <PublicLayout />,
     children: [
       { index: true, element: <Home /> },
-      { index: `${AUTH_ROUTES.HOME}`, element: <Home /> },
-      { path: `${AUTH_ROUTES.ABOUT}`, element: <About /> },
-      { path: `${AUTH_ROUTES.SERVICE}`, element: <Services /> },
-      { path: `${AUTH_ROUTES.CONTACT}`, element: <Contact /> },
-      { path: `${AUTH_ROUTES.CAREER}`, element: <CareerPage /> },
-      { path: `${AUTH_ROUTES.BLOG}`, element: <Blogpage /> },
-      { path: `${AUTH_ROUTES.BLOG}/:id`, element: <BlogDetilePage /> },
+      { index: AUTH_ROUTES.HOME, element: <Home /> },
+      { path: AUTH_ROUTES.ABOUT, element: <About /> },
+      { path: AUTH_ROUTES.SERVICE, element: <Services /> },
       {
         path: `${AUTH_ROUTES.SERVICE}/:type`,
         element: <ServiceDetailesPage />,
       },
+      { path: "/terms", element: <TermsPage /> },
+      { path: "/privacy", element: <PrivacyPage /> },
+
+      { path: AUTH_ROUTES.CONTACT, element: <Contact /> },
+      { path: AUTH_ROUTES.CAREER, element: <CareerPage /> },
+      { path: AUTH_ROUTES.BLOG, element: <Blogpage /> },
+      { path: `${AUTH_ROUTES.BLOG}/:id`, element: <BlogDetilePage /> },
     ],
   },
   {

@@ -8,7 +8,8 @@ export * from "./auth/testimonial.schema";
 export * from "./auth/callToAction.schema";
 export * from "./auth/footer.schema";
 export * from "./auth/about.schema";
-
+export * from "./auth/terms.schema";
+export * from "./auth/privacy.schema";
 // service
 export * from "./auth/services.schema";
 // blogs

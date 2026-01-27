@@ -1,7 +1,7 @@
 import { NavLink } from "react-router-dom";
 
 const Footer = ({ brand, links, copyright }) => {
-
+  
   return (
     <footer className="bg-gray-900 text-gray-400">
       <div className="max-w-7xl mx-auto px-6 py-16">

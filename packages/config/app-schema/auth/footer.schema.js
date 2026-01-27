@@ -15,6 +15,8 @@ export const footerSchema = {
       { label: "Road Transport", path: "/services/road" },
       { label: "Air Freight", path: "/services/air" },
       { label: "Warehousing", path: "/services/warehouse" },
+      { label: "Ocean", path: "/services/ocean" },
+      { label: "Supply Chain Solution", path: "/services/supply-chain" },
     ],
     legal: [
       { label: "Privacy Policy", path: "/privacy" },

@@ -8,7 +8,7 @@ import { useServices } from "../../hooks/useServices";
 import { servicesSchema } from "@repo/app-schema";
 
 const ServiceContainer = () => {
-  console.log(servicesSchema);
+  console.log(servicesSchema, "container");
   const {
     getServiceHero,
     getCoreService,
@@ -34,8 +34,8 @@ const ServiceContainer = () => {
         <IndustrySolutions data={serviceIndustrayData} />
         <ServiceWorkflow data={serviceWorkFlowData} />
         <ServiceCTA data={serviceCTAData} />
-        <FooterContainer />
       </main>
+      <FooterContainer />
     </>
   );
 };

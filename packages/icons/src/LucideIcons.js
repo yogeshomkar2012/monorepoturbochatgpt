@@ -1,1 +1,9 @@
-export { Truck, Plane, Ship, Warehouse, Package, Route } from "lucide-react";
+export {
+  Truck,
+  Plane,
+  Ship,
+  Warehouse,
+  Package,
+  Route,
+  LogIn,
+} from "lucide-react";

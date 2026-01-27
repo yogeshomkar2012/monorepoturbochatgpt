@@ -9,7 +9,7 @@ const IndustrySolutions = ({ data = [] }) => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="border border-border text-primary rounded-xl p-6 font-semibold  hover:bg-primary hover:text-white transition"
+            className="border border-warning text-primary rounded-xl p-6 font-semibold  hover:bg-primary hover:text-white transition"
           >
             {item}
           </div>

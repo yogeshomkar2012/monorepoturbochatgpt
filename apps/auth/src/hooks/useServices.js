@@ -12,11 +12,17 @@ export const useServices = () => {
     resolveData(serverData, servicesSchema.workflow);
   const getServiceCTA = (serverData) =>
     resolveData(serverData, servicesSchema.cta);
+  
+  const getServiceDetailes = (slug, serverData) => {
+    const slugData = resolveData(serverData, servicesSchema.coreServices);
+    return slugData.find((service) => service.slug === slug);
+  };
   return {
     getServiceCTA,
     getCoreService,
     getServiceHero,
     getIndustry,
     getWorkFlow,
+    getServiceDetailes,
   };
 };

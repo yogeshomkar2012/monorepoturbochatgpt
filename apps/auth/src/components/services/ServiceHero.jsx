@@ -1,4 +1,4 @@
-export const ServiceHero = ({ data }) => {
+export const ServiceHero = ({ data = {} }) => {
   const { title, subtitle, description } = data;
   return (
     <section className=" bg-slate-900 text-white w-full py-16 justify-center grid gap-6">
