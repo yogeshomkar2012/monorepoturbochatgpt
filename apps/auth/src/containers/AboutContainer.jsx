@@ -1,4 +1,6 @@
-import React from "react";
+// packages
+import { MainWrapper } from "@repo/ui";
+// packages
 import { CallToAction } from "../components/home/CallToAction";
 import AboutHero from "../components/about/AboutHero";
 import { MissionVision } from "../components/about/MissionVision";
@@ -14,7 +16,6 @@ import { useJourney } from "../hooks/useJourney";
 import { useCertification } from "../hooks/useCertification";
 import { useTeam } from "../hooks/useTeam";
 const AboutContainer = () => {
-
   const leadershipServerData = [];
   const { getLeaderShip } = useLaderShip();
   const leadershipData = getLeaderShip(leadershipServerData);
@@ -30,26 +31,28 @@ const AboutContainer = () => {
   const certificationServerData = [];
   const { getCertification } = useCertification();
   const certificationData = getCertification(certificationServerData);
- 
+
   const teamServerData = [];
   const { getTeam } = useTeam();
   const teamData = getTeam(teamServerData);
- 
+
   const serverCallToActionData = {};
   const { getCTA } = useCTA();
   const callToActionData = getCTA(serverCallToActionData);
 
   return (
-    <main className="grid gap-24 pt-24 p-6 ">
-      <AboutHero />
-      <MissionVision data={resolvemissionVisionData} />
-      <Leadership data={leadershipData} />
-      <Journey data={resolvejourneyData} />
-      <Certifications data={certificationData} />
-      <Team data={teamData} />
-      <CallToAction callToActionData={callToActionData} />
+    <>
+      <MainWrapper className="grid gap-24">
+        <AboutHero />
+        <MissionVision data={resolvemissionVisionData} />
+        <Leadership data={leadershipData} />
+        <Journey data={resolvejourneyData} />
+        <Certifications data={certificationData} />
+        <Team data={teamData} />
+        <CallToAction callToActionData={callToActionData} />
+      </MainWrapper>
       <FooterContainer />
-    </main>
+    </>
   );
 };
 

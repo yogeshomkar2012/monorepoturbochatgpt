@@ -1,8 +1,9 @@
+import { SectionWrapper } from "@repo/ui";
 export const Technology = ({ technologyData = {} }) => {
   const { title, subtitle, features } = technologyData;
 
   return (
-    <section className="bg-gray-50 py-10 rounded-2xl">
+    <SectionWrapper >
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="mb-16 text-center">
@@ -29,6 +30,6 @@ export const Technology = ({ technologyData = {} }) => {
           ))}
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };

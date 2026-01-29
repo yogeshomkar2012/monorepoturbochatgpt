@@ -1,18 +1,12 @@
+// packages
+import { SectionWrapper } from "@repo/ui";
+// packages
+
 export default function Contact() {
   return (
-    <section className="w-full">
-      {/* ===== Header ===== */}
-      <div className="bg-slate-900 text-white py-16">
-        <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-4xl font-bold mb-4">Contact Us</h1>
-          <p className="text-slate-300 max-w-2xl mx-auto">
-            Have questions or need support? We’re here to help you.
-          </p>
-        </div>
-      </div>
-
+    <SectionWrapper>
       {/* ===== Main Grid ===== */}
-      <div className="max-w-7xl mx-auto px-6 py-16">
+      <div className="max-w-7xl mx-auto px-6 ">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
           {/* ===== Left: Contact Info ===== */}
           <div className="space-y-6">
@@ -93,6 +87,6 @@ export default function Contact() {
           </div>
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 }

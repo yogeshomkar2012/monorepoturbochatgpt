@@ -1,8 +1,9 @@
+import { SectionWrapper } from "@repo/ui";
 export const HowItWorks = ({ HowItWorksData = {} }) => {
   const { title, subtitle, steps } = HowItWorksData;
 
   return (
-    <section className="bg-gray-50 py-20 rounded-2xl">
+    <SectionWrapper>
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="mb-16 text-center">
@@ -37,6 +38,6 @@ export const HowItWorks = ({ HowItWorksData = {} }) => {
           ))}
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };

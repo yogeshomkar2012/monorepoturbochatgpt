@@ -1,8 +1,10 @@
-import React from "react";
+// packages
+import { SectionWrapper } from "@repo/ui";
+// packages
 
 export const Certifications = ({ data = [] }) => {
   return (
-    <section className="py-20 bg-slate-50">
+    <SectionWrapper className="">
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <h2 className="text-3xl font-bold text-primary font-serif underline underline-offset-8 decoration-warning">
@@ -32,6 +34,6 @@ export const Certifications = ({ data = [] }) => {
           ))}
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };

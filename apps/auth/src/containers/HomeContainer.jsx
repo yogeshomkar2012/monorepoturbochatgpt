@@ -1,5 +1,8 @@
 import Hero from "../components/home/Hero";
 import { HowItWorks } from "../components/home/HowItWorks";
+// packages
+import { MainWrapper } from "@repo/ui";
+// packages
 
 import ServicesSection from "../components/home/ServicesSection";
 import { WhyChooseUs } from "../components/home/WhyChooseUs";
@@ -16,8 +19,13 @@ import { useWhyChooseUs } from "../hooks/useWhyChooseUs";
 import { useTechnology } from "../hooks/useTechnology";
 import { useTestiMonial } from "../hooks/useTestiMonial";
 import { useCTA } from "../hooks/useCTA";
+import { useServices } from "../hooks/useServices";
 
 const HomeContainer = () => {
+  const serverService = [];
+  const { getCoreService } = useServices();
+  const serviceData = getCoreService(serverService);
+
   const serverBrandData = {};
   const { getBranding } = useBranding();
   const branding = getBranding(serverBrandData);
@@ -46,17 +54,19 @@ const HomeContainer = () => {
   const callToActionData = getCTA(serverCallToActionData);
   console.log(callToActionData);
   return (
-    <main className="grid gap-24 pt-24 p-6 ">
-      <Hero branding={branding} />
-      <ServicesSection />
-      <WhyChooseUs whyChooseusData={whyChooseusData} />
-      <HowItWorks HowItWorksData={HowItWorksData} />
-      <Coverage coverageData={coverageData} />
-      <Technology technologyData={technologyData} />
-      <Testimonials testimonialsData={testimonialsData} />
-      <CallToAction callToActionData={callToActionData} />
+    <>
+      <MainWrapper className="grid gap-24 ">
+        <Hero branding={branding} />
+        <ServicesSection services={serviceData} />
+        <WhyChooseUs whyChooseusData={whyChooseusData} />
+        <HowItWorks HowItWorksData={HowItWorksData} />
+        <Coverage coverageData={coverageData} />
+        <Technology technologyData={technologyData} />
+        <Testimonials testimonialsData={testimonialsData} />
+        <CallToAction callToActionData={callToActionData} />
+      </MainWrapper>{" "}
       <FooterContainer />
-    </main>
+    </>
   );
 };
 

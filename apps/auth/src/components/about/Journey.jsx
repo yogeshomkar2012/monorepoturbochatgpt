@@ -1,7 +1,10 @@
+// packages
 import { journey } from "@repo/ui";
+import { SectionWrapper } from "@repo/ui";
+// packages
 export const Journey = ({ data = [] }) => {
   return (
-    <section className="relative grid md:grid-cols-2">
+    <SectionWrapper className="relative grid md:grid-cols-2">
       {/* <section className="relative grid  grid-rows-[auto_1fr]"> */}
       {/* Image Row */}
       <div className="relative md:h-full h-105">
@@ -50,6 +53,6 @@ export const Journey = ({ data = [] }) => {
           </div>
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };

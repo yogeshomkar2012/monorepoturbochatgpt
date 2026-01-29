@@ -1,11 +1,12 @@
 import { NavLink } from "react-router-dom";
 import { Button } from "@repo/ui";
-
+import { ButtonFactory } from "@repo/factories";
+import { SectionWrapper } from "@repo/ui";
 export const CallToAction = ({ callToActionData = {} }) => {
   const { title, subtitle, primaryAction, secondaryAction } = callToActionData;
 
   return (
-    <section className="bg-primary rounded-2xl py-20">
+    <SectionWrapper>
       <div className="mx-auto max-w-7xl px-6 text-center">
         <h2 className="text-3xl font-bold  md:text-4xl text-warning">
           {title}
@@ -15,21 +16,17 @@ export const CallToAction = ({ callToActionData = {} }) => {
 
         <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:justify-center">
           <NavLink to={primaryAction.path}>
-            <Button className="bg-white text-primary hover:bg-gray-100 px-8 py-3 font-semibold">
+            <Button className="cursor-pointer text-primary border border-primary hover:bg-primary hover:text-text-white bg-white capitalize px-4 py-2 font-medium transition rounded focus:outline-none focus:ring-1 ">
               {primaryAction.label}
             </Button>
           </NavLink>
-
           <NavLink to={secondaryAction.path}>
-            <Button
-              variant="outline"
-              className="border-white text-white hover:bg-white hover:text-primary px-8 py-3 font-semibold"
-            >
+            <ButtonFactory variant="primary">
               {secondaryAction.label}
-            </Button>
+            </ButtonFactory>
           </NavLink>
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };

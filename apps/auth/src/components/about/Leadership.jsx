@@ -1,8 +1,7 @@
-import React from "react";
-
+import {SectionWrapper}from "@repo/ui"
 export const Leadership = ({ data = [] }) => {
   return (
-    <section className="py-20">
+    <SectionWrapper>
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <h2 className="text-3xl text-primary font-bold font-serif underline underline-offset-8 decoration-warning">
@@ -31,6 +30,6 @@ export const Leadership = ({ data = [] }) => {
           ))}
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };

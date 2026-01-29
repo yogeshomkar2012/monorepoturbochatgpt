@@ -9,6 +9,7 @@ import { servicesSchema } from "@repo/app-schema";
 import ServiceOverView from "../../components/services/ServiceOverView";
 import ServiceWorkflow from "../../components/services/ServiceWorkflow";
 import IndustrySolutions from "../../components/services/IndustrySolutions";
+import { MainWrapper } from "@repo/ui";
 const ServiceDetailsContainer = () => {
   console.log(servicesSchema);
   const { type } = useParams();
@@ -20,13 +21,13 @@ const ServiceDetailsContainer = () => {
   return (
     <>
       <ServiceHero data={data} />
-      <main className="grid gap-24 p-6">
+      <MainWrapper className="grid gap-24 p-6">
         <ServiceOverView data={data.overview} />
         <IndustrySolutions data={data.industries} />
         <ServiceWorkflow data={data.workflow} />
         <ServiceFeatures data={data.features} />
         <ServiceCTA data={data.cta} />
-      </main>
+      </MainWrapper>
       <FooterContainer />
     </>
   );

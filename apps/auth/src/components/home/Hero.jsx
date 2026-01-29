@@ -1,8 +1,9 @@
 import { ButtonFactory } from "@repo/factories";
+import { SectionWrapper } from "@repo/ui";
 
 export default function Hero({ branding }) {
   return (
-    <section className="bg-white rounded-lg p-4 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[70vh] ">
+    <SectionWrapper className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center min-h-[70vh] ">
       {/* LEFT CONTENT */}
       <div className="grid gap-6">
         <h1 className="text-4xl font-serif lg:text-5xl font-bold text-primary leading-tight">
@@ -22,6 +23,6 @@ export default function Hero({ branding }) {
       <div className="   h-full">
         <img src={branding.heroImage} className="rounded-lg" />
       </div>
-    </section>
+    </SectionWrapper>
   );
 }

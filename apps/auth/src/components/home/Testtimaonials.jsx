@@ -1,8 +1,9 @@
+import { SectionWrapper } from "@repo/ui";
 export const Testimonials = ({ testimonialsData = {} }) => {
   const { title, subtitle, testimonials } = testimonialsData;
 
   return (
-    <section className="bg-white rounded-2xl py-20">
+    <SectionWrapper >
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="mb-16 text-center">
@@ -31,6 +32,6 @@ export const Testimonials = ({ testimonialsData = {} }) => {
           ))}
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };

@@ -9,7 +9,8 @@
   "exports": {
     ".": "./index.jsx",
     "./button": "./src/components/button/BaseButton.jsx",
-    "./footer": "./src/components/Footer.jsx"
+    "./footer": "./src/components/Footer.jsx",
+    "./MainWrapper": "./src/components/wrappers/MainWrapper.jsx"
   },
   "scripts": {
     "test": "vitest",

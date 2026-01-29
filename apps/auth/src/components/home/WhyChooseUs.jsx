@@ -1,8 +1,10 @@
+
+import {SectionWrapper } from "@repo/ui"
 export const WhyChooseUs = ({ whyChooseusData }) => {
   const { title, subtitle, items } = whyChooseusData;
 
   return (
-    <section className="bg-white py-20 rounded-2xl">
+    <SectionWrapper >
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="mb-14 text-center">
@@ -27,6 +29,6 @@ export const WhyChooseUs = ({ whyChooseusData }) => {
           ))}
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };

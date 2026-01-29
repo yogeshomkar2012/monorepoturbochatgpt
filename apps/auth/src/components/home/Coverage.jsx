@@ -1,8 +1,9 @@
+import { SectionWrapper } from "@repo/ui";
 export const Coverage = ({ coverageData = {} }) => {
   const { title, subtitle, stats } = coverageData;
 
   return (
-    <section className="bg-white rounded-2xl py-20">
+    <SectionWrapper>
       <div className="mx-auto max-w-7xl px-6">
         {/* Header */}
         <div className="mb-16 text-center">
@@ -29,6 +30,6 @@ export const Coverage = ({ coverageData = {} }) => {
           ))}
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };

@@ -1,6 +1,7 @@
+import { SectionWrapper } from "@repo/ui";
 export const MissionVision = ({ data = [] }) => {
   return (
-    <section className="py-20 ">
+    <SectionWrapper >
       <div className="container mx-auto px-4">
         <div className="text-center mb-14">
           <h2 className=" font-serif text-3xl font-bold text-primary  underline underline-offset-8 decoration-warning">
@@ -28,6 +29,6 @@ export const MissionVision = ({ data = [] }) => {
           ))}
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };

@@ -1,7 +1,8 @@
+import {SectionWrapper } from "@repo/ui"
 const AboutHero = () => {
   return (
-    <section className="w-full bg-text-white">
-      <div className="container py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <SectionWrapper className="w-full">
+      <div className="container  grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* LEFT CONTENT */}
         <div className="space-y-6 text-center p-4">
           <span className="inline-block text-sm font-medium font-serif text-green-background">
@@ -45,7 +46,7 @@ const AboutHero = () => {
           </div>
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
 

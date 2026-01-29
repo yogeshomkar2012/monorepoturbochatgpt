@@ -1,3 +1,6 @@
+// packages
+import {MainWrapper } from "@repo/ui";
+// packages
 import ServiceHero from "../../components/services/ServiceHero";
 import CoreServices from "../../components/services/CoreServices";
 import IndustrySolutions from "../../components/services/IndustrySolutions";
@@ -29,12 +32,12 @@ const ServiceContainer = () => {
   return (
     <>
       <ServiceHero data={serviceHeroData} />
-      <main className="grid gap-24 p-6 ">
+      <MainWrapper className="grid gap-24 ">
         <CoreServices data={coreServiceData} />
         <IndustrySolutions data={serviceIndustrayData} />
         <ServiceWorkflow data={serviceWorkFlowData} />
         <ServiceCTA data={serviceCTAData} />
-      </main>
+      </MainWrapper>
       <FooterContainer />
     </>
   );

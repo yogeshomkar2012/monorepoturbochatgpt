@@ -1,10 +1,10 @@
 import React from "react";
 import { Truck, Plane, Ship, Warehouse, Package, Route } from "@repo/icons";
-
+import {SectionWrapper } from "@repo/ui"
 const ServicesSection = ({services=[]}) => {
 
   return (
-    <section className="bg-text-white rounded-2xl  ">
+    <SectionWrapper >
       <div className="max-w-7xl mx-auto px-4">
         {/* Heading */}
         <header className=" p-2 text-center mb-14">
@@ -26,6 +26,7 @@ const ServicesSection = ({services=[]}) => {
                 key={index}
                 className="group bg-warning border border-border rounded-xl p-6 hover:shadow-lg transition-all duration-300"
               >
+               
                 <div className="flex items-center justify-center w-14 h-14 rounded-full bg-primary/10 text-primary mb-5 group-hover:bg-primary group-hover:text-white transition">
                   <Icon size={28} />
                 </div>
@@ -42,7 +43,7 @@ const ServicesSection = ({services=[]}) => {
           })}
         </div>
       </div>
-    </section>
+    </SectionWrapper>
   );
 };
 

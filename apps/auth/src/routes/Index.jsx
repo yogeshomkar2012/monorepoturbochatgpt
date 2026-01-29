@@ -21,7 +21,9 @@ export const router = createBrowserRouter([
       { index: true, element: <Home /> },
       { index: AUTH_ROUTES.HOME, element: <Home /> },
       { path: AUTH_ROUTES.ABOUT, element: <About /> },
-      { path: AUTH_ROUTES.SERVICE, element: <Services /> },
+      {
+        path: AUTH_ROUTES.SERVICE, element: <Services />
+      },
       {
         path: `${AUTH_ROUTES.SERVICE}/:type`,
         element: <ServiceDetailesPage />,
