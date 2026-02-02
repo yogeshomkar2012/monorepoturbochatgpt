@@ -16,7 +16,7 @@ const BlogContainer = () => {
     <main className="grid gap-0">
       <BlogHero />
       <BlogList blogs={resolvedBlogs} />
-      <FooterContainer />
+     
     </main>
   );
 };

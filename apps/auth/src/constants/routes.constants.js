@@ -1,5 +1,5 @@
 export const AUTH_ROUTES = {
-  HOME: "/",
+  HOME: "/home",
   ABOUT: "/about",
   CONTACT: "/contact",
   SERVICE: "/services",

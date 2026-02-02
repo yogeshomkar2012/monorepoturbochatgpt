@@ -4,7 +4,7 @@ import { SectionWrapper } from "@repo/ui";
 // packages
 
 const CoreServices = ({ data = [] }) => {
-  console.log(data);
+  
   return (
     <SectionWrapper>
       <div className="container mx-auto px-6">

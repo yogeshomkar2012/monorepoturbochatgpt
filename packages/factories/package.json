@@ -5,10 +5,12 @@
   "main": "index.jsx",
   "type": "module",
   "exports": {
-    ".": "./index.jsx",
-    "./ButtonFactory": "./ButtonFactory.jsx"
+    ".": "./index.jsx"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@repo/ui": "workspace:*"
+  }
 }

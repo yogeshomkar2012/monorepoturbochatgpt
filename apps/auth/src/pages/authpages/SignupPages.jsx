@@ -1,9 +1,8 @@
-import React from 'react'
+import React from "react";
+import SignupContainer from "../../containers/authContainers/SignupContainer";
 
 const SignupPages = () => {
-  return (
-    <div>SignupPages</div>
-  )
-}
+  return <SignupContainer />;
+};
 
-export default SignupPages
+export default SignupPages;

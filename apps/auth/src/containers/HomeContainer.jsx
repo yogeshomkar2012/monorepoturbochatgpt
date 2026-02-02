@@ -52,7 +52,7 @@ const HomeContainer = () => {
   const serverCallToActionData = {};
   const { getCTA } = useCTA();
   const callToActionData = getCTA(serverCallToActionData);
-  console.log(callToActionData);
+ 
   return (
     <>
       <MainWrapper className="grid gap-24 ">
@@ -64,8 +64,8 @@ const HomeContainer = () => {
         <Technology technologyData={technologyData} />
         <Testimonials testimonialsData={testimonialsData} />
         <CallToAction callToActionData={callToActionData} />
-      </MainWrapper>{" "}
-      <FooterContainer />
+      </MainWrapper>
+   
     </>
   );
 };

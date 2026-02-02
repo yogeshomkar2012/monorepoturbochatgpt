@@ -51,7 +51,7 @@ const AboutContainer = () => {
         <Team data={teamData} />
         <CallToAction callToActionData={callToActionData} />
       </MainWrapper>
-      <FooterContainer />
+    
     </>
   );
 };

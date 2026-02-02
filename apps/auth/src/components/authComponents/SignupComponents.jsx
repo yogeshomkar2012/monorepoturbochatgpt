@@ -1,16 +1,17 @@
-import { Link } from "react-router-dom";
+import React from "react";
 import { AUTH_ROUTES } from "../../constants/routes.constants";
-import { formSchemaMap } from "@repo/app-schema";
+import { Link } from "react-router-dom";
 import { FormFactory } from "@repo/factories";
+import { formSchemaMap } from "@repo/app-schema";
 
-const LoginComponent = ({ onSubmit, onChange, errors, formData }) => {
+const SignupComponents = ({ onSubmit, onChange, errors, formData }) => {
   return (
-    <div className="bg-white  border-primary p-6 rounded-lg shadow-md w-96 group">
+    <div className="bg-white  border-primary p-6 rounded-lg shadow-md w-96">
       <FormFactory
         variant="auth"
-        formType="login"
-        fields={formSchemaMap.login}
-        submitLabel="signin"
+        formType="signup"
+        fields={formSchemaMap.signup}
+        submitLabel="signup"
         onSubmit={onSubmit}
         onChange={onChange}
         errors={errors}
@@ -18,10 +19,10 @@ const LoginComponent = ({ onSubmit, onChange, errors, formData }) => {
       />
       <div className="text-center mt-2">
         <span className="text-center gap-2 text- text-gray-400 my-2 ">
-          If you don't have an account.!
+          If you have an account.!
         </span>
         <Link
-          to={AUTH_ROUTES.SIGNUP}
+          to={AUTH_ROUTES.LOGIN}
           className="text-primary text-xs hover:underline hover:underline-offset-8 hover:decoration-warning"
         >
           click here
@@ -31,4 +32,4 @@ const LoginComponent = ({ onSubmit, onChange, errors, formData }) => {
   );
 };
 
-export default LoginComponent;
+export default SignupComponents;

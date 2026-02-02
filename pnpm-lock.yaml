@@ -333,6 +333,9 @@ importers:
 
   packages/ui:
     dependencies:
+      '@repo/factories':
+        specifier: workspace:*
+        version: link:../factories
       react:
         specifier: ^19.2.0
         version: 19.2.0

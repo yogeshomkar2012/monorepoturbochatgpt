@@ -21,7 +21,7 @@ const BlogDtaileContainer = () => {
         date={blog.date}
       />
       <BlogContent content={blog.content} />
-      <FooterContainer />
+
     </main>
   );
 };

@@ -4,7 +4,7 @@ import FooterContainer from "./FooterContainer"
 const CareerContainer = () => {
   return <>
       <Career />
-      <FooterContainer/>
+   
       </>
 };
 

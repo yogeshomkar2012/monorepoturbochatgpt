@@ -10,7 +10,8 @@
     ".": "./index.jsx",
     "./button": "./src/components/button/BaseButton.jsx",
     "./footer": "./src/components/Footer.jsx",
-    "./MainWrapper": "./src/components/wrappers/MainWrapper.jsx"
+    "./MainWrapper": "./src/components/wrappers/MainWrapper.jsx",
+    "./input": "./src/components/input/BaseInput.jsx"
   },
   "scripts": {
     "test": "vitest",
@@ -26,6 +27,7 @@
   "license": "ISC",
   "dependencies": {
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "@repo/factories": "workspace:*"
   }
 }

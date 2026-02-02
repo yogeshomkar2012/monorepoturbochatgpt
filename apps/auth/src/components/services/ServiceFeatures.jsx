@@ -1,7 +1,6 @@
 import { SectionWrapper } from "@repo/ui";
 
 const ServiceFeatures = ({ data }) => {
-  console.log(data, "features");
   const grids = data.length > 5 ? 5 : data.length;
   return (
     <SectionWrapper>

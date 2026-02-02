@@ -11,7 +11,7 @@ const Navbar = ({
 }) => {
   return (
     <>
-      <div className="w-full grid grid-cols-[1fr_auto] md:grid-cols-[auto_1fr] sm:row-gap-2 sm:grid-cols-1 sm:grid-cols-1 sm:justify-center sm:items-center md:h-15 sm:h-25 px-4">
+      <div className="w-full grid grid-cols-[1fr_auto] md:grid-cols-[auto_1fr] sm:row-gap-2 sm:grid-cols-1  sm:justify-center sm:items-center md:h-15 sm:h-25 px-4">
         <div className="flex items-center  sm:justify-center  gap-8 md:gap-4 sm:p-2">
           <div className="h-10 rounded-full">
             <img className="h-full rounded-full" src={`${logo}`} />
@@ -21,12 +21,12 @@ const Navbar = ({
           </div>
         </div>
         <div className=" md:justify-self-end sm:border-black  sm: sm:p-3 sm:justify-self-center ">
-          <nav className="hidden sm:block sm:flex">
-            <ul className={`grid grid-cols-5 place-content-around gap-6`}>
+          <nav className="hidden sm:block ">
+            <ul className={`grid  grid-cols-5 place-content-around gap-6`}>
               {links.map((link, index) => (
                 <li
                   key={index}
-                  className="text-center relative group font-semibold uppercase "
+                  className="text-center relative group  font-semibold uppercase "
                 >
                   <NavLink
                     to={`${link.path}`}
@@ -38,7 +38,7 @@ const Navbar = ({
                       }`
                     }
                   >
-                    <div className="flex gap-1 items-center">
+                    <div className="flex gap-1 items-center justify-center ">
                       <span>
                         <link.icon size="20" />
                       </span>

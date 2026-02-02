@@ -11,13 +11,12 @@ import ServiceWorkflow from "../../components/services/ServiceWorkflow";
 import IndustrySolutions from "../../components/services/IndustrySolutions";
 import { MainWrapper } from "@repo/ui";
 const ServiceDetailsContainer = () => {
-  console.log(servicesSchema);
+
   const { type } = useParams();
   const { getServiceDetailes } = useServices();
 
   const serverData = [];
   const data = getServiceDetailes(type, serverData);
-  console.log(data, "services");
   return (
     <>
       <ServiceHero data={data} />

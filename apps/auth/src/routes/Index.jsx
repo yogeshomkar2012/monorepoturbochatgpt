@@ -3,7 +3,6 @@ import Home from "../pages/Home";
 import About from "../pages/About";
 import Services from "../pages/servicePages/Services";
 import Contact from "../pages/Contact";
-import Login from "../pages/Login";
 import Signup from "../pages/Signup";
 import { AUTH_ROUTES } from "../constants/routes.constants";
 import PublicLayout from "../layouts/PublicLayout";
@@ -14,12 +13,13 @@ import BlogDetilePage from "../pages/BlogDetilePage";
 import ServiceDetailesPage from "../pages/servicePages/ServiceDetailesPage";
 import PrivacyPage from "../pages/PrivacyPage";
 import TermsPage from "../pages/TermsPage";
+import LoginPages from "../pages/authpages/LoginPages";
 export const router = createBrowserRouter([
   {
     element: <PublicLayout />,
     children: [
       { index: true, element: <Home /> },
-      { index: AUTH_ROUTES.HOME, element: <Home /> },
+      { path: AUTH_ROUTES.HOME, element: <Home /> },
       { path: AUTH_ROUTES.ABOUT, element: <About /> },
       {
         path: AUTH_ROUTES.SERVICE, element: <Services />
@@ -40,7 +40,7 @@ export const router = createBrowserRouter([
   {
     element: <AuthLayout />,
     children: [
-      { path: `${AUTH_ROUTES.LOGIN}`, element: <Login /> },
+      { path: `${AUTH_ROUTES.LOGIN}`, element: <LoginPages/> },
       { path: `${AUTH_ROUTES.SIGNUP}`, element: <Signup /> },
     ],
   },

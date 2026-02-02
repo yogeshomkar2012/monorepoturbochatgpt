@@ -1,5 +1,4 @@
-import React from "react";
-import { Truck, Plane, Ship, Warehouse, Package, Route } from "@repo/icons";
+
 import {SectionWrapper } from "@repo/ui"
 const ServicesSection = ({services=[]}) => {
 

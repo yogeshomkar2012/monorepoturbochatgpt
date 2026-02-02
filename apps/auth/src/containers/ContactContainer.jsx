@@ -17,7 +17,7 @@ const ContactContainer = () => {
       <MainWrapper>
         <Contact />
       </MainWrapper>
-      <FooterContainer />
+    
     </>
   );
 };

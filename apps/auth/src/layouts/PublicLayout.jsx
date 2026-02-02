@@ -1,7 +1,10 @@
 import NavbarContainer from "../containers/NavbarContainer";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { Footer } from "@repo/ui";
+import { useAppNavigationShortcuts } from "../hooks/useAppNavigationShortcuts";
+import FooterContainer from "../containers/FooterContainer";
 const PublicLayout = () => {
+  useAppNavigationShortcuts();
   return (
     <div className="min-h-screen grid grid-rows-[auto_1fr_auto]">
       <header className=" border-b-border bg-green-background p-3">
@@ -9,10 +12,10 @@ const PublicLayout = () => {
       </header>
 
       {/* <main className="flex-1 flex items-center justify-center "> */}
-        <Outlet />
+      <Outlet />
       {/* </main> */}
 
-      {/* <Footer /> */}
+    <FooterContainer/>
     </div>
   );
 };

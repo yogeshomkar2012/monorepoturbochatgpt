@@ -9,7 +9,7 @@ const buttonMap = {
   danger: DangerButton,
   success: SuccessButton,
 };
-export default function ButtonFactory({ variant = "primary",...props}) {
+export default function ButtonFactory({ variant = "primary", ...props }) {
   const ButtonComponent = buttonMap[variant] || Primary;
   return <ButtonComponent {...props} />;
 }

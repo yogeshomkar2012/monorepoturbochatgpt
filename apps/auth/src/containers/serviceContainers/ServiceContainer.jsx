@@ -11,7 +11,6 @@ import { useServices } from "../../hooks/useServices";
 import { servicesSchema } from "@repo/app-schema";
 
 const ServiceContainer = () => {
-  console.log(servicesSchema, "container");
   const {
     getServiceHero,
     getCoreService,

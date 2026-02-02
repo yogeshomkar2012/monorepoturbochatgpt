@@ -14,3 +14,4 @@ export * from "./auth/privacy.schema";
 export * from "./auth/services.schema";
 // blogs
 export * from "./auth/blog.schema";
+export * from "./formSchema/index";
