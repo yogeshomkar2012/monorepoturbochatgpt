@@ -8,8 +8,12 @@ export const ValidationSignUp = ({
   confirmPassword,
 }) => {
   const errors = {};
+  console.log(name.length);
   if (!name.trim()) {
     errors.name = "Name Is Required";
+  }
+  if (!name.length < 3) {
+    errors.name = "Name Is Atleast 3 charecters";
   }
   const emailError = ValidationEmail(email);
   if (emailError) {
@@ -29,7 +33,6 @@ export const ValidationSignUp = ({
 };
 export const ValidationLogin = ({ email, password }) => {
   const errors = {};
-
   const emailError = ValidationEmail(email);
   if (emailError) {
     errors.email = emailError;
