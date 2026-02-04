@@ -1,4 +1,4 @@
-import { InputFactory, ButtonFactory } from "@repo/factories";
+import { FieldFactory, ButtonFactory } from "@repo/factories";
 
 const AuthForm = ({
   fields = [],
@@ -24,7 +24,7 @@ const AuthForm = ({
             ) : (
               <span className="text-red-500 text-end">*</span>
             )}
-            <InputFactory
+            <FieldFactory
               key={index}
               name={item.name}
               placeholder={item.placeholder}

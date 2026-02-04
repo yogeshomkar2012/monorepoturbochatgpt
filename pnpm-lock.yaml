@@ -51,9 +51,18 @@ importers:
       '@repo/app-schema':
         specifier: workspace:*
         version: link:../../packages/config/app-schema
+      '@repo/branding':
+        specifier: workspace:*
+        version: link:../../packages/branding
       '@repo/factories':
         specifier: workspace:*
         version: link:../../packages/factories
+      '@repo/icons':
+        specifier: workspace:*
+        version: link:../../packages/icons
+      '@repo/schema':
+        specifier: workspace:*
+        version: link:../../packages/schema
       '@repo/tailwind-config':
         specifier: workspace:*
         version: link:../../packages/config/tailwind-config
@@ -63,6 +72,9 @@ importers:
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      '@repo/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
       react:
         specifier: ^19.2.0
         version: 19.2.0
@@ -137,6 +149,9 @@ importers:
       '@eslint/js':
         specifier: ^9.39.1
         version: 9.39.1
+      '@repo/branding':
+        specifier: workspace:*
+        version: link:../../packages/branding
       '@types/react':
         specifier: ^19.2.5
         version: 19.2.7
@@ -272,6 +287,8 @@ importers:
         specifier: ^7.2.4
         version: 7.3.1(@types/node@22.15.3)(jiti@2.6.1)(lightningcss@1.30.2)
 
+  packages/branding: {}
+
   packages/config/app-schema:
     dependencies:
       '@repo/icons':
@@ -321,13 +338,23 @@ importers:
         specifier: ^8.50.0
         version: 8.50.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)
 
-  packages/factories: {}
+  packages/factories:
+    dependencies:
+      '@repo/ui':
+        specifier: workspace:*
+        version: link:../ui
 
   packages/icons:
     dependencies:
       lucide-react:
         specifier: ^0.562.0
         version: 0.562.0(react@19.2.0)
+
+  packages/schema:
+    dependencies:
+      '@repo/icons':
+        specifier: workspace:*
+        version: link:../icons
 
   packages/typescript-config: {}
 

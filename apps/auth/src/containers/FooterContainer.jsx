@@ -6,6 +6,8 @@ const FooterContainer = () => {
   const { getFooter } = useFooter();
   const serverFooterData = {};
   const footerData = getFooter(serverFooterData);
+console.log(footerData)
+
   return (
     <Footer
       brand={footerData.brand}

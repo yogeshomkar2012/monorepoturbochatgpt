@@ -6,9 +6,11 @@ import { useNavigation } from "../hooks/useNavigation";
 const NavbarContainer = () => {
   // 🔴 Future API data
   const serverBrandData = {};
-  const serverNavigationData = [];
   const { getBranding } = useBranding();
+  
+   const serverNavigationData = [];
   const { getNavigation } = useNavigation();
+
   const branding = getBranding(serverBrandData);
   const navigationLinks = getNavigation(serverNavigationData);
 
