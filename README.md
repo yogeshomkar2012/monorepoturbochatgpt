@@ -1,3 +1,144 @@
+<!-- fproject structure -->
+
+monorepoturbochatgpt/
+│
+├── apps/
+│ ├── admin/
+│ │ ├── .gitignore
+│ │ ├── .turbo/
+│ │ ├── dist/
+│ │ ├── eslint.config.js
+│ │ ├── index.html
+│ │ ├── node_modules/
+│ │ ├── package.json
+│ │ ├── public/
+│ │ ├── README.md
+│ │ ├── src/
+│ │ │ ├── App.jsx
+│ │ │ ├── assets/
+│ │ │ ├── components/
+│ │ │ ├── constants/
+│ │ │ ├── containers/
+│ │ │ ├── context/
+│ │ │ ├── hooks/
+│ │ │ ├── index.css
+│ │ │ ├── layouts/
+│ │ │ ├── main.jsx
+│ │ │ ├── pages/
+│ │ │ ├── routes/
+│ │ │ ├── stores/
+│ │ │ └── utils/
+│ │ ├── vite.config.js
+│ │ ├── vitest.config.js
+│ │ └── vitest.setup.js
+│ ├── auth/
+│ │ ├── .gitignore
+│ │ ├── eslint.config.js
+│ │ ├── index.html
+│ │ ├── node_modules/
+│ │ ├── package.json
+│ │ ├── public/
+│ │ ├── README.md
+│ │ ├── src/
+│ │ │ ├── App.jsx
+│ │ │ ├── assets/
+│ │ │ ├── components/
+│ │ │ ├── constants/
+│ │ │ ├── containers/
+│ │ │ ├── context/
+│ │ │ ├── hooks/
+│ │ │ ├── index.css
+│ │ │ ├── layouts/
+│ │ │ ├── main.jsx
+│ │ │ ├── pages/
+│ │ │ ├── routes/
+│ │ │ └── utils/
+│ │ ├── vite.config.js
+│ │ ├── vitest.config.js
+│ │ └── vitest.setup.js
+│ ├── superadmin/
+│ │ ├── .gitignore
+│ │ ├── .turbo/
+│ │ ├── dist/
+│ │ ├── eslint.config.js
+│ │ ├── index.html
+│ │ ├── node_modules/
+│ │ ├── package.json
+│ │ ├── README.md
+│ │ ├── src/
+│ │ │ ├── App.jsx
+│ │ │ ├── assets/
+│ │ │ ├── components/
+│ │ │ ├── constants/
+│ │ │ ├── containers/
+│ │ │ ├── contexts/
+│ │ │ ├── hooks/
+│ │ │ ├── index.css
+│ │ │ ├── layouts/
+│ │ │ ├── main.jsx
+│ │ │ ├── pages/
+│ │ │ ├── public/
+│ │ │ ├── routes/
+│ │ │ ├── stores/
+│ │ │ ├── SupperAdminDashboard.jsx
+│ │ │ └── utils/
+│ │ ├── testsetup.js
+│ │ ├── vite.config.js
+│ │ ├── vitest.config.js
+│ │ └── vitest.setup.js
+│ └── user/
+│ ├── .gitignore
+│ ├── .turbo/
+│ ├── dist/
+│ ├── eslint.config.js
+│ ├── index.html
+│ ├── node_modules/
+│ ├── package.json
+│ ├── public/
+│ ├── README.md
+│ ├── src/
+│ │ ├── App.jsx
+│ │ ├── assets/
+│ │ ├── components/
+│ │ ├── constants/
+│ │ ├── containers/
+│ │ ├── contexts/
+│ │ ├── hooks/
+│ │ ├── index.css
+│ │ ├── layouts/
+│ │ ├── main.jsx
+│ │ ├── pages/
+│ │ ├── PublicDashBoard.jsx
+│ │ ├── routes/
+│ │ ├── stores/
+│ │ └── utils/
+│ ├── vite.config.js
+│ ├── vitest.config.js
+│ └── vitest.setup.js
+│
+├── node_modules/
+├── package.json
+├── packages/
+│ ├── assets/
+│ ├── branding/
+│ ├── config/
+│ ├── constants/
+│ ├── eslint-config/
+│ ├── factories/
+│ ├── icons/
+│ ├── schema/
+│ ├── services/
+│ ├── typescript-config/
+│ ├── ui/
+│ └── utils/
+├── pnpm-lock.yaml
+├── pnpm-workspace.yaml
+├── README.md
+├── test.jsx
+├── turbo.json
+├── vitest.config.js
+└── vitest.setup.js
+
 <!-- developer -->
 
 # testing tools used and configration
@@ -27,17 +168,16 @@ import { defineConfig } from "vitest/config";
 import react from "@vitejs/plugin-react-swc";
 
 export default defineConfig({
-  plugins: [react()],
-  test: {
-    environment: "jsdom",
-    globals: true,
-    setupFiles: "./vitest.setup.js",
-    coverage: {
-      reporter: ["text", "json", "html"],
-    },
-  },
+plugins: [react()],
+test: {
+environment: "jsdom",
+globals: true,
+setupFiles: "./vitest.setup.js",
+coverage: {
+reporter: ["text", "json", "html"],
+},
+},
 });
-
 
 # step 2 create vitest.setup.js in each apps
 
