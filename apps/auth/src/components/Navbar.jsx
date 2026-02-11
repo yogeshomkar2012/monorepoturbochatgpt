@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import { Button } from "@repo/ui";
-import { useState } from "react";
 
 const Navbar = ({
   links = [],
