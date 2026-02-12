@@ -1,7 +1,12 @@
 import { useState } from "react";
+import {
+ ChevronDown,
+  ChevronUp,
+  LogOut,
+} from "@repo/icons";
+const AdminSideBar =({NavLink, socialLinksData, data})=>{
 
-const AadminSideBar =({NavLink})=>{
-     const [openMenu, setOpenMenu] = useState(null);
+  const [openMenu, setOpenMenu] = useState(null);
   const handleToggle = (menuName) => {
     setOpenMenu(openMenu === menuName ? null : menuName);
   };
@@ -93,4 +98,4 @@ const AadminSideBar =({NavLink})=>{
 };
 
 
-export default AadminSideBar;
+export default AdminSideBar;

@@ -1,8 +1,7 @@
-import React from "react";
-import DashBoardHeaderComponents from "../components/DashBoardHeaderComponents";
 
+import {HeaderFactory} from "@repo/factories"
 const DashboardHeaderContainer = ({ onMenuClick }) => {
-  return <DashBoardHeaderComponents onMenuClick={onMenuClick} />;
+  return <HeaderFactory role="admin" onMenuClick={onMenuClick} />;
 };
 
 export default DashboardHeaderContainer;

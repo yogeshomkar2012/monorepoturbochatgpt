@@ -1,8 +1,4 @@
-import DangerButton from "../ui/src/components/button/DangerButton";
-import PrimaryButton from "../ui/src/components/button/PrimaryButton";
-import SecondaryButton from "../ui/src/components/button/SecondaryButton";
-import SuccessButton from "../ui/src/components/button/SuccessButton";
-
+import {DangerButton,PrimaryButton,SecondaryButton,SuccessButton} from "@repo/ui"
 const buttonMap = {
   primary: PrimaryButton,
   secondary: SecondaryButton,

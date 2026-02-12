@@ -1,19 +1,19 @@
-import React, { useState, useRef, useEffect } from "react";
 import {
-  Search,
-  Bell,
-  Menu,
-  User,
-  ChevronDown,
-  Settings,
-  LogOut,
-  UserCircle,
-  Package,
-  MessageSquare,
-  AlertCircle,
-} from "lucide-react";
+    Search,
+      Bell,
+      Menu,
+      User,
+      ChevronDown,
+      Settings,
+      LogOut,
+      UserCircle,
+      Package,
+      MessageSquare,
+      AlertCircle,
+} from "lucide-react"
+import React, { useState, useRef, useEffect } from "react";
 
-const DashBoardHeaderComponents = ({ onMenuClick }) => {
+export default function AdminHeader({onMenuClick}){
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isNotifOpen, setIsNotifOpen] = useState(false);
   const profileRef = useRef(null);
@@ -179,6 +179,4 @@ const DashBoardHeaderComponents = ({ onMenuClick }) => {
       </div>
     </header>
   );
-};
-
-export default DashBoardHeaderComponents;
+}

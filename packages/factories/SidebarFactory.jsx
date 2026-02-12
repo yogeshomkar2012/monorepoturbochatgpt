@@ -1,4 +1,11 @@
-const SidebarFactory =()=>{
-
+import { AdminSideBar } from "@repo/ui"
+const sidebarMap = {
+    admin: AdminSideBar,
 }
-export default SidebarFactory;
+export default function SidebarFactory({role, ...props}){
+    const SidebarComponent = sidebarMap[role];
+    if (!SidebarComponent) {
+        return null;
+    }
+    return <SidebarComponent {...props} />;
+}

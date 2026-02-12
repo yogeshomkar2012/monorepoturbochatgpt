@@ -1,8 +1,8 @@
 import React from "react";
 
 import { useSideBarHook } from "../hooks/useSidebarHook";
-import SideBarComponents from "../components/SideBarComponents";
-
+import {SidebarFactory} from "@repo/factories"
+import { NavLink } from "react-router-dom";
 const SideBarContainer = () => {
   const { getSidebarData, getSocialLinksData } = useSideBarHook();
   
@@ -10,8 +10,8 @@ const SideBarContainer = () => {
   const socialLinks = []; // Placeholder for future API data
   const socialLinksData = getSocialLinksData(socialLinks);
   const sidebarData = getSidebarData(sidebarLinks);
-
-  return <SideBarComponents data={sidebarData} socialLinksData={socialLinksData} />;
+  return <SidebarFactory role="admin" data={sidebarData} socialLinksData={socialLinksData} NavLink={NavLink} />;
+  
 };
 
 export default SideBarContainer;

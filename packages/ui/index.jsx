@@ -4,4 +4,10 @@ export { default as Footer } from "./src/components/Footer.jsx";
 export { default as MainWrapper } from "./src/components/wrappers/MainWrapper.jsx";
 export { default as SectionWrapper } from "./src/components/wrappers/SectionWrapper.jsx";
 export { default as Input } from "./src/components/input/BaseInput.jsx";
-export { default as AdminSideBar } from "./src/components/sidebar/AdminSideBar.jsx";
+export {default as DangerButton} from "./src/components/button/DangerButton.jsx";
+export {default as PrimaryButton} from "./src/components/button/PrimaryButton.jsx";
+export {default as SecondaryButton} from "./src/components/button/SecondaryButton.jsx";
+export {default as SuccessButton} from "./src/components/button/SuccessButton.jsx";
+
+export {default as AdminSideBar} from "./src/components/sidebar/AdminSideBar.jsx";
+export {default as AdminHeader} from "./src/components/header/AdminHeader.jsx"
