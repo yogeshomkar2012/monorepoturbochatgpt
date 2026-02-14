@@ -2,7 +2,7 @@
   "name": "@repo/factories",
   "version": "1.0.0",
   "description": "",
-  "main": "index.jsx",
+  "main": "index.js",
   "type": "module",
   "exports": {
     ".": "./index.jsx"

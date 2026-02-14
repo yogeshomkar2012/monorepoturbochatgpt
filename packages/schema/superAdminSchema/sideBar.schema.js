@@ -6,12 +6,9 @@ import {
   Warehouse,
   MapPin,
   ScrollText,
-  Instagram,
-  Facebook,
-  Twitter,
 } from '@repo/icons';
 
-export const sideBarNavigationSchema = [
+export const superAdminsideBarNavigationSchema = [
   { id: 1, title: 'Control Tower', icon: LayoutDashboard, link: '/dashboard' },
   {
     id: 2,

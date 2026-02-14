@@ -1,0 +1,13 @@
+{
+  "name": "@repo/constants",
+  "version": "1.0.0",
+  "description": "constants for roles and other things",
+  "main": "index.js",
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

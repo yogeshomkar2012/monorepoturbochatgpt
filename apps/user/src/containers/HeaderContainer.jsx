@@ -1,19 +1,19 @@
 import {
-    Search,
-      Bell,
-      Menu,
-      User,
-      ChevronDown,
-      Settings,
-      LogOut,
-      UserCircle,
-      Package,
-      MessageSquare,
-      AlertCircle,
-} from "lucide-react"
-import React, { useState, useRef, useEffect } from "react";
+  Search,
+  Bell,
+  Menu,
+  User,
+  ChevronDown,
+  Settings,
+  LogOut,
+  UserCircle,
+  Package,
+  MessageSquare,
+  AlertCircle,
+} from 'lucide-react';
+import React, { useState, useRef, useEffect } from 'react';
 
-export default function AdminHeader({onMenuClick}){
+export default function HeaderContainter({ onMenuClick }) {
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isNotifOpen, setIsNotifOpen] = useState(false);
   const profileRef = useRef(null);
@@ -23,27 +23,27 @@ export default function AdminHeader({onMenuClick}){
   const notifications = [
     {
       id: 1,
-      title: "New Order",
-      desc: "Order #5421 was placed",
-      time: "2m ago",
+      title: 'New Order',
+      desc: 'Order #5421 was placed',
+      time: '2m ago',
       icon: <Package size={16} className="text-blue-600" />,
-      bg: "bg-blue-100",
+      bg: 'bg-blue-100',
     },
     {
       id: 2,
-      title: "New Message",
-      desc: "Support ticket updated",
-      time: "1h ago",
+      title: 'New Message',
+      desc: 'Support ticket updated',
+      time: '1h ago',
       icon: <MessageSquare size={16} className="text-green-600" />,
-      bg: "bg-green-100",
+      bg: 'bg-green-100',
     },
     {
       id: 3,
-      title: "System Alert",
-      desc: "Server load is high",
-      time: "5h ago",
+      title: 'System Alert',
+      desc: 'Server load is high',
+      time: '5h ago',
       icon: <AlertCircle size={16} className="text-red-600" />,
-      bg: "bg-red-100",
+      bg: 'bg-red-100',
     },
   ];
 
@@ -54,8 +54,8 @@ export default function AdminHeader({onMenuClick}){
       if (notifRef.current && !notifRef.current.contains(event.target))
         setIsNotifOpen(false);
     };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   return (
@@ -68,24 +68,29 @@ export default function AdminHeader({onMenuClick}){
         >
           <Menu size={24} />
         </button>
-        <h1 className="text-lg font-semibold text-gray-800 hidden xl:block ml-2">
-           Dashboard
-        </h1>
+        <div className="flex hidden lg:flex items-center pt-1 pb-1 gap-6">
+          <img
+            className="h-12 w-12 rounded-full border-2 border-primary/20"
+            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAiiod4PVQrDsuJpzsEtcFSG-R77GFKDCRwA&s"
+            alt="logo"
+          />
+          <h2 className="text-center text-primary uppercase font-bold tracking-wider text-sm">
+            omkarlogistic
+          </h2>
+        </div>
       </div>
 
       {/* 2. Search Bar */}
       <div className="flex-1 max-w-md mx-2 md:mx-8">
-        <div className="relative">
-          <Search
-            className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
-            size={16}
-          />
-          <input
-            type="text"
-            placeholder="Search..."
-            className="w-full pl-9 pr-3 py-2 bg-gray-50 border border-gray-200 rounded-lg text-sm focus:outline-none"
-          />
-        </div>
+        <nav className="border item-center border-black/20 rounded-full px-3 p-2">
+          <ul className="flex justify-around">
+            <li>track</li>
+            <li>reports</li>
+            <li>Booking</li>
+            <li>enquire</li>
+            <li>chat</li>
+          </ul>
+        </nav>
       </div>
 
       {/* 3. Actions & Profile */}
@@ -154,14 +159,14 @@ export default function AdminHeader({onMenuClick}){
               <p className="text-sm font-medium text-gray-900 leading-none">
                 Yogesh
               </p>
-              <p className="text-xs text-gray-500 mt-1">Admin</p>
+              <p className="text-xs text-gray-500 mt-1">User</p>
             </div>
             <div className="w-8 h-8 md:w-9 md:h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
               <User size={18} />
             </div>
             <ChevronDown
               size={14}
-              className={`text-gray-400 hidden sm:block transition-transform ${isProfileOpen ? "rotate-180" : ""}`}
+              className={`text-gray-400 hidden sm:block transition-transform ${isProfileOpen ? 'rotate-180' : ''}`}
             />
           </button>
 

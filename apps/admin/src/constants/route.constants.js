@@ -1,3 +1,3 @@
 export const ADMIN_ROUTES = {
-    DASHBOARD:"/admin/dashboard"
+    DASHBOARD:"/admin/dashboard",
 }

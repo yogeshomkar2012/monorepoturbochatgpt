@@ -1,8 +1,9 @@
-import { AdminHeader } from "@repo/ui"
+import { AdminHeader,SuperAdminHeader } from "@repo/ui"
 
-const headerMap={
-    admin:AdminHeader,
-}
+const headerMap = {
+  admin: AdminHeader,
+  superadmin:SuperAdminHeader,
+};
 export default function HeaderFactory({role, ...props}){
     const Components = headerMap[role];
     if(Components){

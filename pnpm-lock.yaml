@@ -54,6 +54,9 @@ importers:
       '@repo/branding':
         specifier: workspace:*
         version: link:../../packages/branding
+      '@repo/constants':
+        specifier: workspace:*
+        version: link:../../packages/constants
       '@repo/factories':
         specifier: workspace:*
         version: link:../../packages/factories
@@ -182,9 +185,21 @@ importers:
       '@repo/app-schema':
         specifier: workspace:*
         version: link:../../packages/config/app-schema
+      '@repo/branding':
+        specifier: workspace:*
+        version: link:../../packages/branding
+      '@repo/constants':
+        specifier: workspace:*
+        version: link:../../packages/constants
       '@repo/factories':
         specifier: workspace:*
         version: link:../../packages/factories
+      '@repo/icons':
+        specifier: workspace:*
+        version: link:../../packages/icons
+      '@repo/schema':
+        specifier: workspace:*
+        version: link:../../packages/schema
       '@repo/tailwind-config':
         specifier: workspace:*
         version: link:../../packages/config/tailwind-config
@@ -194,6 +209,9 @@ importers:
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      '@repo/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
       react:
         specifier: ^19.2.0
         version: 19.2.0
@@ -237,9 +255,21 @@ importers:
       '@repo/app-schema':
         specifier: workspace:*
         version: link:../../packages/config/app-schema
+      '@repo/branding':
+        specifier: workspace:*
+        version: link:../../packages/branding
+      '@repo/constants':
+        specifier: workspace:*
+        version: link:../../packages/constants
       '@repo/factories':
         specifier: workspace:*
         version: link:../../packages/factories
+      '@repo/icons':
+        specifier: workspace:*
+        version: link:../../packages/icons
+      '@repo/schema':
+        specifier: workspace:*
+        version: link:../../packages/schema
       '@repo/tailwind-config':
         specifier: workspace:*
         version: link:../../packages/config/tailwind-config
@@ -249,6 +279,9 @@ importers:
       '@repo/ui':
         specifier: workspace:*
         version: link:../../packages/ui
+      '@repo/utils':
+        specifier: workspace:*
+        version: link:../../packages/utils
       react:
         specifier: ^19.2.0
         version: 19.2.0
@@ -301,6 +334,8 @@ importers:
   packages/config/tailwind-config: {}
 
   packages/config/testing-config: {}
+
+  packages/constants: {}
 
   packages/eslint-config:
     devDependencies:

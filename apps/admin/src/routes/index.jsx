@@ -8,8 +8,8 @@ export const router = createBrowserRouter([
   {
     element: <AdminDasboardLayout />,
     children: [
+      { path: "/", element: <DashboardPage/> },
       { path: "/admin", element: <DashboardPage/> },
-      { path: "/admin/dashboard", element: <DashboardPage/> },
       { path: ADMIN_ROUTES.DASHBOARD, element: <DashboardPage /> },
     ],
   },

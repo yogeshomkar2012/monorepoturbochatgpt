@@ -13,7 +13,7 @@ import {
 } from "lucide-react"
 import React, { useState, useRef, useEffect } from "react";
 
-export default function AdminHeader({onMenuClick}){
+export default function superAdminHeader({onMenuClick}){
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isNotifOpen, setIsNotifOpen] = useState(false);
   const profileRef = useRef(null);
@@ -69,7 +69,7 @@ export default function AdminHeader({onMenuClick}){
           <Menu size={24} />
         </button>
         <h1 className="text-lg font-semibold text-gray-800 hidden xl:block ml-2">
-           Dashboard
+        Dashboard
         </h1>
       </div>
 
@@ -154,7 +154,7 @@ export default function AdminHeader({onMenuClick}){
               <p className="text-sm font-medium text-gray-900 leading-none">
                 Yogesh
               </p>
-              <p className="text-xs text-gray-500 mt-1">Admin</p>
+              <p className="text-xs text-gray-500 mt-1">super Admin</p>
             </div>
             <div className="w-8 h-8 md:w-9 md:h-9 rounded-full bg-primary/10 flex items-center justify-center text-primary border border-primary/20">
               <User size={18} />
