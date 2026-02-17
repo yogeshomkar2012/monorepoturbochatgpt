@@ -9,7 +9,6 @@ export default function PrivacyPage() {
       <MainWrapper className="pt-5! ">
         <LegalPage {...privacySchema} />
       </MainWrapper>
-      <FooterContainer />
     </>
   );
 }

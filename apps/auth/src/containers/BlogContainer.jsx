@@ -2,7 +2,6 @@ import BlogHero from "../components/blog/BlogHero";
 import { BlogList } from "../components/blog/BlogLIst";
 
 import { useBlog } from "../hooks/useBlog";
-import FooterContainer from "./FooterContainer";
 
 const BlogContainer = () => {
   const { resolveBlogs } = useBlog();

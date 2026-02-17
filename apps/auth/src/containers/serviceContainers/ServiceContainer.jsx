@@ -6,9 +6,7 @@ import CoreServices from "../../components/services/CoreServices";
 import IndustrySolutions from "../../components/services/IndustrySolutions";
 import ServiceWorkflow from "../../components/services/ServiceWorkflow";
 import ServiceCTA from "../../components/services/ServiceCTA";
-import FooterContainer from "../FooterContainer";
 import { useServices } from "../../hooks/useServices";
-import { servicesSchema } from "@repo/app-schema";
 
 const ServiceContainer = () => {
   const {
@@ -37,7 +35,6 @@ const ServiceContainer = () => {
         <ServiceWorkflow data={serviceWorkFlowData} />
         <ServiceCTA data={serviceCTAData} />
       </MainWrapper>
-      <FooterContainer />
     </>
   );
 };

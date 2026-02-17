@@ -8,7 +8,6 @@ export const useBlog = () => {
     return hasData ? serverData : blogSchema;
   };
   const resolveBlogDetailesById = (id, serverData) => {
-   console.log(blogSchema)
     const blogDetailes =
       Array.isArray(serverData) && serverData.length > 0
         ? serverData

@@ -1,7 +1,8 @@
-import { Link } from "react-router-dom";
-import { AUTH_ROUTES } from "../../constants/routes.constants";
-import { formSchemaMap } from "@repo/app-schema";
-import { FormFactory } from "@repo/factories";
+import { Link } from 'react-router-dom';
+import { AUTH_ROUTES } from '@repo/constants';
+import { formSchemaMap } from '@repo/app-schema';
+import { FormFactory } from '@repo/factories';
+
 
 const LoginComponent = ({ onSubmit, onChange, errors, formData }) => {
   return (
@@ -21,7 +22,7 @@ const LoginComponent = ({ onSubmit, onChange, errors, formData }) => {
           If you don't have an account.!
         </span>
         <Link
-          to={AUTH_ROUTES.SIGNUP}
+          to={`/${AUTH_ROUTES.SIGNUP}`}
           className="text-primary text-xs hover:underline hover:underline-offset-8 hover:decoration-warning"
         >
           click here

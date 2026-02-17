@@ -1,5 +1,6 @@
-import { NavLink } from "react-router-dom";
-import { Button } from "@repo/ui";
+import { NavLink } from 'react-router-dom';
+import { Button } from '@repo/ui';
+import { AUTH_ROUTES} from "@repo/constants"
 
 const Navbar = ({
   links = [],
@@ -21,7 +22,7 @@ const Navbar = ({
         </div>
         <div className=" md:justify-self-end sm:border-black  sm: sm:p-3 sm:justify-self-center ">
           <nav className="hidden sm:block ">
-            <ul className={`grid  grid-cols-5 place-content-around gap-6`}>
+            <ul className={`grid  grid-cols-6 place-content-around gap-6`}>
               {links.map((link, index) => (
                 <li
                   key={index}
@@ -32,15 +33,13 @@ const Navbar = ({
                     className={({ isActive }) =>
                       `  hover:underline hover:underline-offset-8 decoration-primary text-text-white ${
                         isActive
-                          ? "underline underline-offset-8 decoration-primary text-primary"
-                          : ""
+                          ? 'underline underline-offset-8 decoration-primary text-primary'
+                          : ''
                       }`
                     }
                   >
                     <div className="flex gap-1 items-center justify-center ">
-                      <span>
-                        <link.icon size="20" />
-                      </span>
+                      <span>{link.icon && <link.icon size="20" />}</span>
                       {link.label}
                     </div>
                   </NavLink>
@@ -51,7 +50,7 @@ const Navbar = ({
                       {link.children.map((child, i) => (
                         <li key={i}>
                           <NavLink
-                            to={child.path}
+                            to={`/${AUTH_ROUTES.SERVICE}/${child.path}`}
                             className="hover:bg-hover-navgreen block m-1 p-2"
                           >
                             {child.label}

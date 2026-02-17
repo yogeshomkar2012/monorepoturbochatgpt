@@ -1,3 +1,6 @@
-export const ADMIN_ROUTES = {
-    DASHBOARD:"/admin/dashboard",
-}
+const ADMIN_ROUTES = {
+  DASHBOARD: '/admin',
+  ADMIN_DASHBOARD: '/admin/dashboard',
+};
+
+export default ADMIN_ROUTES;

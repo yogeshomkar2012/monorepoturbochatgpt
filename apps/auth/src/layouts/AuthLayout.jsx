@@ -1,6 +1,6 @@
 import React from "react";
 import NavbarContainer from "../containers/NavbarContainer";
-import { Outlet, useNavigate } from "react-router-dom";
+import { Outlet} from "react-router-dom";
 import { useAppNavigationShortcuts } from "../hooks/useAppNavigationShortcuts";
 import FooterContainer from "../containers/FooterContainer";
 

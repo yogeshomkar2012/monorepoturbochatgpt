@@ -6,24 +6,28 @@ import {
   Warehouse,
   MapPin,
   ScrollText,
-  Instagram,
-  Facebook,
-  Twitter,
 } from '@repo/icons';
 
-export const sideBarNavigationSchema = [
-  { id: 1, title: 'Control Tower', icon: LayoutDashboard, link: '/dashboard' },
+import { admin_route_constants } from '@repo/constants';
+
+export const AdminSideBarNavigationSchema = [
+  {
+    id: 1,
+    title: 'Control Tower',
+    icon: LayoutDashboard,
+    link: '/admin/dashboard',
+  },
   {
     id: 2,
     title: 'Shipments',
     icon: Package,
     subItems: [
-      { title: 'Live Tracking', link: '/shipments/active' },
-      { title: 'Order History', link: '/shipments/history' },
-      { title: 'Create Consignment', link: '/shipments/new' },
+      { title: 'Live Tracking', link: admin_route_constants.shipments_active },
+      { title: 'Order History', link: admin_route_constants.shipments_history },
+      { title: 'Create Consignment', link: admin_route_constants.shipments_new },   
     ],
   },
-  { id: 3, title: 'Driver Directory', icon: Users, link: '/drivers' },
+  { id: 3, title: 'Driver Directory', icon: Users, link: admin_route_constants.drivers },
   {
     id: 4,
     title: 'Fleet Management',

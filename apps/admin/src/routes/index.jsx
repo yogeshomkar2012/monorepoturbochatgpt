@@ -1,16 +1,24 @@
-import { createBrowserRouter } from "react-router-dom";
-import AdminDasboardLayout from "../layouts/AdminDasboardLayout";
+import { createBrowserRouter } from 'react-router-dom';
+import DashBoardLyout from '../layouts/DashboardLayout';
+import ADMIN_ROUTES from '../constants/route.constants';
+import AdminDashboardPage from '../pages/AdminDashboardPage';
 
-import { ADMIN_ROUTES } from "../constants/route.constants";
-import DashboardPage from "../pages/DashboardPage";
-
-export const router = createBrowserRouter([
+const router = createBrowserRouter([
   {
-    element: <AdminDasboardLayout />,
+    element: <DashBoardLyout />,
+    children: [{ path: '/', element: <AdminDashboardPage /> }],
+  },
+  {
+    element: <DashBoardLyout />,
     children: [
-      { path: "/", element: <DashboardPage/> },
-      { path: "/admin", element: <DashboardPage/> },
-      { path: ADMIN_ROUTES.DASHBOARD, element: <DashboardPage /> },
+      { path: ADMIN_ROUTES.DASHBOARD, element: <AdminDashboardPage /> },
+    ],
+  },
+  {
+    element: <DashBoardLyout />,
+    children: [
+      { path: ADMIN_ROUTES.ADMIN_DASHBOARD, element: <AdminDashboardPage /> },
     ],
   },
 ]);
+export default router;

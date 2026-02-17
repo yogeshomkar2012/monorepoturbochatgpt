@@ -18,3 +18,7 @@ export { default as AdminSideBar } from './src/components/sidebar/AdminSideBar.j
 // super admin components
 export { default as SuperAdminHeader } from './src/components/header/superAdminHeader.jsx';
 export { default as SuperAdminSideBar } from './src/components/sidebar/SuperAdminSideBar.jsx';
+
+// user components
+export { default as UserHeader } from './src/components/header/UserHeader.jsx';
+// user components

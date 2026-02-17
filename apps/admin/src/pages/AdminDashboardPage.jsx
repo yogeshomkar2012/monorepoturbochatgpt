@@ -1,13 +1,33 @@
-import React from "react";
-import { Users, DollarSign, Package, TrendingUp } from "lucide-react";
+import React from 'react';
+import { Users, DollarSign, Package, TrendingUp } from 'lucide-react';
 
-const DashboardPage = () => {
+const AdminDashboardPage = () => {
   // Mock data for top stats
   const stats = [
-    { label: "Total Users", value: "2,543", icon: <Users className="text-blue-600" />, growth: "+12.5%" },
-    { label: "Revenue", value: "$45,231", icon: <DollarSign className="text-green-600" />, growth: "+8.2%" },
-    { label: "Orders", value: "1,120", icon: <Package className="text-purple-600" />, growth: "-2.4%" },
-    { label: "Growth", value: "24.8%", icon: <TrendingUp className="text-orange-600" />, growth: "+4.1%" },
+    {
+      label: 'Total Users',
+      value: '2,543',
+      icon: <Users className="text-blue-600" />,
+      growth: '+12.5%',
+    },
+    {
+      label: 'Revenue',
+      value: '$45,231',
+      icon: <DollarSign className="text-green-600" />,
+      growth: '+8.2%',
+    },
+    {
+      label: 'Orders',
+      value: '1,120',
+      icon: <Package className="text-purple-600" />,
+      growth: '-2.4%',
+    },
+    {
+      label: 'Growth',
+      value: '24.8%',
+      icon: <TrendingUp className="text-orange-600" />,
+      growth: '+4.1%',
+    },
   ];
 
   return (
@@ -15,8 +35,12 @@ const DashboardPage = () => {
       {/* 1. Header Section */}
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold text-gray-800">Analytics Overview</h1>
-          <p className="text-gray-500 text-sm">Welcome back! Here is what's happening today.</p>
+          <h1 className="text-2xl font-bold text-gray-800">
+            Analytics Overview
+          </h1>
+          <p className="text-gray-500 text-sm">
+            Welcome back! Here is what's happening today.
+          </p>
         </div>
         <button className="bg-primary text-white px-4 py-2 rounded-lg text-sm font-medium hover:opacity-90 transition-opacity w-fit">
           Download Report
@@ -26,10 +50,15 @@ const DashboardPage = () => {
       {/* 2. Stats Grid: 1 col on mobile, 2 on tablet, 4 on desktop */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
         {stats.map((stat, idx) => (
-          <div key={idx} className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+          <div
+            key={idx}
+            className="bg-white p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow"
+          >
             <div className="flex items-center justify-between mb-4">
               <div className="p-2 bg-gray-50 rounded-lg">{stat.icon}</div>
-              <span className={`text-xs font-medium px-2 py-1 rounded-full ${stat.growth.startsWith('+') ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}>
+              <span
+                className={`text-xs font-medium px-2 py-1 rounded-full ${stat.growth.startsWith('+') ? 'bg-green-100 text-green-700' : 'bg-red-100 text-red-700'}`}
+              >
                 {stat.growth}
               </span>
             </div>
@@ -45,7 +74,9 @@ const DashboardPage = () => {
         <div className="lg:col-span-2 bg-white p-6 rounded-xl border border-gray-100 shadow-sm">
           <div className="flex items-center justify-between mb-6">
             <h2 className="font-bold text-gray-800">Recent Shipments</h2>
-            <button className="text-primary text-sm font-medium hover:underline">View All</button>
+            <button className="text-primary text-sm font-medium hover:underline">
+              View All
+            </button>
           </div>
           <div className="overflow-x-auto">
             <table className="w-full text-left text-sm">
@@ -63,7 +94,9 @@ const DashboardPage = () => {
                     <td className="py-4 pr-4 font-medium">#OL-542{item}</td>
                     <td className="py-4 pr-4">Client Name {item}</td>
                     <td className="py-4 pr-4">
-                      <span className="px-2 py-1 bg-yellow-100 text-yellow-700 rounded-md text-xs">Pending</span>
+                      <span className="px-2 py-1 bg-yellow-100 text-yellow-700 rounded-md text-xs">
+                        Pending
+                      </span>
                     </td>
                     <td className="py-4 font-semibold">$240.00</td>
                   </tr>
@@ -81,10 +114,13 @@ const DashboardPage = () => {
               <div key={source} className="space-y-2">
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-600">{source}</span>
-                  <span className="font-medium">{80 - (i * 20)}%</span>
+                  <span className="font-medium">{80 - i * 20}%</span>
                 </div>
                 <div className="w-full bg-gray-100 h-2 rounded-full overflow-hidden">
-                  <div className={`h-full bg-primary`} style={{ width: `${80 - (i * 20)}%` }} />
+                  <div
+                    className={`h-full bg-primary`}
+                    style={{ width: `${80 - i * 20}%` }}
+                  />
                 </div>
               </div>
             ))}
@@ -95,4 +131,4 @@ const DashboardPage = () => {
   );
 };
 
-export default DashboardPage;
+export default AdminDashboardPage;

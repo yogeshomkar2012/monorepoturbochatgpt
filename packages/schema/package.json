@@ -7,7 +7,8 @@
     ".": "./index.js"
   },
   "dependencies": {
-    "@repo/icons": "workspace:*"
+    "@repo/icons": "workspace:*",
+    "@repo/constants": "workspace:*"
   },
   "type": "module",
   "keywords": [],
