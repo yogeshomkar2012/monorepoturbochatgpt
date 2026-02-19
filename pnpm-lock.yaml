@@ -11,6 +11,9 @@ importers:
       lucide-react:
         specifier: ^0.562.0
         version: 0.562.0(react@19.2.0)
+      prop-types:
+        specifier: ^15.8.1
+        version: 15.8.1
     devDependencies:
       '@tailwindcss/vite':
         specifier: ^4.1.18
@@ -379,7 +382,11 @@ importers:
         specifier: ^8.50.0
         version: 8.50.0(eslint@9.39.1(jiti@2.6.1))(typescript@5.9.2)
 
-  packages/factories: {}
+  packages/factories:
+    dependencies:
+      '@repo/constants':
+        specifier: workspace:*
+        version: link:../constants
 
   packages/icons:
     dependencies:
@@ -2086,6 +2093,7 @@ packages:
 
   loose-envify@1.4.0:
     resolution: {integrity: sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==}
+    hasBin: true
 
   lru-cache@11.2.4:
     resolution: {integrity: sha512-B5Y16Jr9LB9dHVkh6ZevG+vAbOsNOYCX+sXvFWFu7B3Iz5mijW3zdbMyhsh8ANd2mSWBYdJgnqi+mL7/LrOPYg==}

@@ -1,5 +1,8 @@
 @import "tailwindcss";
 /* Hide scrollbar for all browsers */
+body{
+  font-family: serif;
+}
 body, html {
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none;  /* IE and Edge */

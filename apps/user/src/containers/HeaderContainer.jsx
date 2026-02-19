@@ -68,7 +68,7 @@ export default function HeaderContainter({ onMenuClick }) {
         >
           <Menu size={24} />
         </button>
-        <div className="flex hidden lg:flex items-center pt-1 pb-1 gap-6">
+        <div className=" lg:flex items-center pt-1 pb-1 gap-6">
           <img
             className="h-12 w-12 rounded-full border-2 border-primary/20"
             src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAiiod4PVQrDsuJpzsEtcFSG-R77GFKDCRwA&s"

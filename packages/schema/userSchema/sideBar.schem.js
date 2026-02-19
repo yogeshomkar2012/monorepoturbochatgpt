@@ -1,24 +1,24 @@
 import {
-  LayoutDashboard,
-  Package,
-  Truck,
   Users,
-  Warehouse,
-  MapPin,
-  ScrollText,
+  MessageSquare,
+  Binoculars,
+  Files,
+  Contact,
 } from '@repo/icons';
 export const userSideBarSchema = [
-  { id: 1, title: 'Track', icon: LayoutDashboard, link: '/dashboard' },
+  { id: 1, title: 'Track', icon: Binoculars, link: '/track' },
   {
     id: 2,
     title: 'reports',
-    icon: Package,
+    icon: Files,
+    link: '/reports',
   },
-  { id: 3, title: 'Booking', icon: Users, link: '/drivers' },
+  { id: 3, title: 'Booking', icon: Users, link: '/booking' },
   {
     id: 4,
     title: 'Enquery',
-    icon: Truck,
+    icon: Contact,
+    link: '/contact',
   },
-  { id: 5, title: 'chat', icon: Warehouse, link: '/warehouse' },
+  { id: 5, title: 'chat', icon: MessageSquare, link: '/message' },
 ];

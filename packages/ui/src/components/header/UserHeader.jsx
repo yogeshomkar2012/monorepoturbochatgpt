@@ -1,23 +1,12 @@
 import { Bell, Menu, User, ChevronDown, LogOut, UserCircle } from '@repo/icons';
-import React, { useState, useRef, useEffect } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 const UserHeader = ({ onMenuClick, headerData }) => {
   const { userNavLink, usernotificationsSchema } = headerData;
-
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isNotifOpen, setIsNotifOpen] = useState(false);
   const profileRef = useRef(null);
   const notifRef = useRef(null);
-  console.log(usernotificationsSchema);
-  // Mock Notifications Data
-
-  // const userNavLink = [
-  //   { label: 'track', path: '/' },
-  //   { label: 'reports', path: '/reports' },
-  //   { label: 'booking', path: '/booking' },
-  //   { label: 'enquire', path: '/enquire' },
-  //   { label: 'chat', path: '/chat' },
-  // ];
 
   useEffect(() => {
     const handleClickOutside = (event) => {
@@ -51,8 +40,12 @@ const UserHeader = ({ onMenuClick, headerData }) => {
           </h2>
         </div>
       </div>
-
-      {/* 2. Search Bar */}
+      <div className="p-4 lg:hidden">
+        <h2 className="text-center text-primary uppercase font-bold font-serif tracking-wider text-xl">
+          omkarlogistic
+        </h2>
+      </div>
+      {/* 2. nav link */}
       <div className="flex-1 hidden lg:flex max-w-md mx-2 md:mx-8">
         <nav className="border item-center border-black/20 rounded-full px-3 p-2">
           <ul className="flex justify-around font-bold text-sm text-gray-500 uppercase">

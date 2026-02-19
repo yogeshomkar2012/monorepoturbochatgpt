@@ -1,7 +1,9 @@
-import React from 'react'
-
-export default function BaseCard() {
+// BaseCard.jsx
+export default function BaseCard({ children, className = '', ...props }) {
+  const baseStyle = `bg-white rounded-lg border border-gray-200 shadow-sm p-4 ${className}`;
   return (
-    <div>BaseCard</div>
-  )
+    <div className={baseStyle} {...props}>
+      {children}
+    </div>
+  );
 }

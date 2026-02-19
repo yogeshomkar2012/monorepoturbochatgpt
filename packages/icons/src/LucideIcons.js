@@ -31,4 +31,6 @@ export {
   UserCircle,
   MessageSquare,
   AlertCircle,
+  Binoculars,
+  Files,
 } from 'lucide-react';

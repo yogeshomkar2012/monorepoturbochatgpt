@@ -1,12 +1,31 @@
-import { Package, MessageSquare, AlertCircle } from '@repo/icons';
+import {
+  Package,
+  MessageSquare,
+  AlertCircle,
+  Users,
+  Binoculars,
+  Files,
+  Contact,Home
+} from '@repo/icons';
 
 export const userHeaderSchema = {
   userNavLink: [
-    { label: 'track', path: '/' },
-    { label: 'reports', path: '/reports' },
-    { label: 'booking', path: '/booking' },
-    { label: 'enquire', path: '/enquire' },
-    { label: 'chat', path: '/chat' },
+    { id: 1, label: 'Home', icon: Home, path: '/' },
+    { id: 2, label: 'Track', icon: Binoculars, path: '/track' },
+    {
+      id: 3,
+      label: 'reports',
+      icon: Files,
+      path: '/reports',
+    },
+    { id: 4, label: 'Booking', icon: Users, path: '/booking' },
+    {
+      id: 5,
+      label: 'Enquery',
+      icon: Contact,
+      path: '/contact',
+    },
+    { id: 6, label: 'chat', icon: MessageSquare, path: '/message' },
   ],
   usernotificationsSchema: [
     {

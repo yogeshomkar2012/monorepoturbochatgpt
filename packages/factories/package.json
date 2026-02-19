@@ -7,9 +7,10 @@
   "exports": {
     ".": "./index.jsx"
   },
+  "dependencies": {
+    "@repo/constants": "workspace:*"
+  },
   "keywords": [],
   "author": "",
-  "license": "ISC",
-  "dependencies": {
-  }
+  "license": "ISC"
 }

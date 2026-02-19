@@ -1,7 +1,12 @@
-
-import { SidebarFactory } from '@repo/factories';
-import useSideBarHook from '../hooks/useSidBarHook';
+// packages
 import { roleConstants } from '@repo/constants';
+import { SidebarFactory } from '@repo/factories';
+// packages
+// hooks
+import useSideBarHook from '../hooks/useUserHeader';
+// hooks
+
+
 import { NavLink } from 'react-router-dom';
 const UserSidebarContainer = () => {
   const { getSidebarData, getSocialLinksData } = useSideBarHook();
@@ -11,7 +16,7 @@ const UserSidebarContainer = () => {
   const socialLinksData = getSocialLinksData(socialLinks);
   return (
     <SidebarFactory
-      role={roleConstants.SUPER_ADMIN}
+      role={roleConstants.USER}
       data={sidebarLinksData}
       socialLinksData={socialLinksData}
       NavLink={NavLink}
