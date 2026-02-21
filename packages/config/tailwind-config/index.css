@@ -48,7 +48,9 @@ body::-webkit-scrollbar, html::-webkit-scrollbar {
   --color-border: #e5e7eb;
   --color-muted: #f1f5f9;
   --color-muted-foreground: #64748b;
-  
+  /* wrapper background */
+  --color-wrapper-background:#F8FAFC
+  /* wrapper background */
   /* app background */
   --color-background: #e7e7e7;
   --color-forground: #020617;

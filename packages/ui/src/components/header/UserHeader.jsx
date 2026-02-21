@@ -1,13 +1,24 @@
-import { Bell, Menu, User, ChevronDown, LogOut, UserCircle } from '@repo/icons';
+import {
+  Bell,
+  Menu,
+  User,
+  ChevronDown,
+  LogOut,
+  UserCircle,
+  Link,
+} from '@repo/icons';
 import { useState, useRef, useEffect } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink, useNavigate } from 'react-router-dom';
 const UserHeader = ({ onMenuClick, headerData }) => {
   const { userNavLink, usernotificationsSchema } = headerData;
   const [isProfileOpen, setIsProfileOpen] = useState(false);
   const [isNotifOpen, setIsNotifOpen] = useState(false);
   const profileRef = useRef(null);
   const notifRef = useRef(null);
-
+  const navigate = useNavigate();
+  const naigateTo = () => {
+    navigate('profile', {replace:true});
+  };
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (profileRef.current && !profileRef.current.contains(event.target))
@@ -142,7 +153,11 @@ const UserHeader = ({ onMenuClick, headerData }) => {
 
           {isProfileOpen && (
             <div className="absolute right-0 mt-2 w-48 bg-white border border-gray-200 rounded-lg shadow-lg py-2 z-50">
-              <button className="w-full flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50">
+              <button
+                onClick={naigateTo}
+                to="profile"
+                className="w-full flex items-center gap-2 px-4 py-2 text-sm text-gray-700 hover:bg-gray-50"
+              >
                 <UserCircle size={16} /> Profile
               </button>
               <button className="w-full flex items-center gap-2 px-4 py-2 text-sm text-red-600 hover:bg-red-50 border-t border-gray-50">

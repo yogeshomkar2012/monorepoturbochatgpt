@@ -35,10 +35,10 @@ export default function UserInfoCard({ user }) {
       {/* Contact List */}
       <div className="space-y-3 mb-6">
         <div className="flex items-center gap-3 text-sm text-slate-600">
-          <span>📧</span> {contact.email}
+          <span>📧</span> {contact?.email || 'No email available'}
         </div>
         <div className="flex items-center gap-3 text-sm text-slate-600">
-          <span>📞</span> {contact.phone}
+          <span>📞</span> {contact?.phone || 'No Contact available'}
         </div>
       </div>
 
@@ -46,11 +46,11 @@ export default function UserInfoCard({ user }) {
       <div className="grid grid-cols-2 gap-2 pt-4 border-t border-slate-100">
         <div className="text-center">
           <div className="text-xs text-slate-400 uppercase">Deliveries</div>
-          <div className="font-bold">{stats.deliveries}</div>
+          <div className="font-bold">{stats?.deliveries || 'No status available'}</div>
         </div>
         <div className="text-center">
           <div className="text-xs text-slate-400 uppercase">Rating</div>
-          <div className="font-bold text-amber-500">⭐ {stats.rating}</div>
+          <div className="font-bold text-amber-500">⭐ {stats?.rating || 'No rating available'}</div>
         </div>
       </div>
     </BaseCard>

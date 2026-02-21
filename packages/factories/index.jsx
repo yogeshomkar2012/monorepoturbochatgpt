@@ -4,3 +4,4 @@ export { default as FormFactory } from './FormFactory.jsx';
 export { default as SidebarFactory } from './SidebarFactory.jsx';
 export { default as HeaderFactory } from './HeaderFactory.jsx';
 export { default as CardFactory } from './CardFactory.jsx';
+export { default as ProfileFactory } from './ProfileFactory.jsx';
