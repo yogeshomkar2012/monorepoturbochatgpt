@@ -24,9 +24,6 @@ export default function UserProfile({ data, onUpdate }) {
             </div>
           )}
         </div>
-        {/* divider */}
-        <div className="bg-gray-400 h-[1px] opacity-50" />
-        {/* divider */}
 
         {/* Content Section */}
         <div className=" p-2 flex-1 flex flex-col items-center justify-center space-y-4">
@@ -48,7 +45,12 @@ export default function UserProfile({ data, onUpdate }) {
               <p className="text-[10px] text-slate-400 font-bold uppercase">
                 Contact Number
               </p>
-              <p className="text-sm text-slate-700">{contact}</p>
+
+              <div className="flex md:flex-col gap-2">
+                <p className="text-sm text-slate-700">{contact}</p>
+                <div className="w-[1px] md:hidden bg-gray-400 h-4 rotate-30 opacity-70"></div>
+                <p className="text-sm text-slate-700">{contact}</p>
+              </div>
             </div>
             <div>
               <p className="text-[10px] text-slate-400 font-bold uppercase">

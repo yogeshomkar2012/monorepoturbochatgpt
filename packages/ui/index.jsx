@@ -23,3 +23,10 @@ export { default as SuperAdminSideBar } from './src/components/sidebar/SuperAdmi
 // user components
 export { default as UserHeader } from './src/components/header/UserHeader.jsx';
 // user components
+// common ui
+// cards
+
+export { default as BaseCard } from './src/components/card/BaseCard.jsx';
+
+// cards
+// common ui

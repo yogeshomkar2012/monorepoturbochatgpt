@@ -1,16 +1,12 @@
-import { ProfileFactory } from '@repo/factories';
+import { ProfileFactory, ButtonFactory } from '@repo/factories';
+import { useNavigate } from 'react-router-dom';
+
 const ProfileContainer = () => {
-  // const sampleDataNoImage = {
-  //   name: 'John Smith',
-  //   role: 'Field Technician',
-  //   employeeId: 'EMP-98765',
-  //   // image: undefined
-  //   stats: {
-  //     deliveries: 18,
-  //     rating: 4.2,
-  //     fuelScore: 28,
-  //   },
-  // };
+  const navigate = useNavigate();
+  const navigateTo = () => {
+    navigate("update", {replace:true})
+  }
+
   const userData = {
     name: 'Omkar S.',
     email: 'omkar@logistics.com',
@@ -21,14 +17,11 @@ const ProfileContainer = () => {
     avatar: null, // This will trigger the initials "OS"
   };
   return (
-    <div className="border border-red-400 min-h-screen flex items-center justify-center">
-      <ProfileFactory
-        role="user"
-        data={userData}
-        onUpdate={() => console.log('update user modul')}
-      />
-      ;
-    </div>
+    <ProfileFactory
+      role="user"
+      data={userData}
+      onUpdate={() => navigateTo()}
+    />
   );
 };
 

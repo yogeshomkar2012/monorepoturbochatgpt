@@ -4,7 +4,8 @@ import UserDashboardLayout from '../layouts/UserDashboardLayout';
 
 import DashboardPage from '../pages/DashboardPage';
 import ProfileLayout from '../layouts/ProfileLayout';
-import ProfilePage from '../pages/ProfilePage';
+import ProfilePage from '../pages/profile/ProfilePage';
+import ProfileUpdatePage from '../pages/profile/ProfileUpdatePage';
 
 const router = createBrowserRouter([
   {
@@ -16,9 +17,12 @@ const router = createBrowserRouter([
         element: <DashboardPage />,
       },
       {
-        path: 'profile',
         element: <ProfileLayout />,
-        children: [{ index: true, element: <ProfilePage /> }],
+        path: 'profile',
+        children: [
+          { index: true, element: <ProfilePage /> },
+          { path: 'update', element: <ProfileUpdatePage /> },
+        ],
       },
       // {
       //   index: true,

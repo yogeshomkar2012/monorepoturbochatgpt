@@ -6,11 +6,11 @@ const profileMap = {
   admin: AdminProfile,
   superadmin: SuperAdminProfile,
 };
-export default function ProfileFactory({ role, data }) {
+export default function ProfileFactory({ role, data, ...props }) {
   const ProfilComponent = profileMap[role.toLowerCase()] || UserProfile;
   return (
     <div className="profile-container">
-      <ProfilComponent data={data} />
+      <ProfilComponent data={data} {...props} />
     </div>
   );
 }
